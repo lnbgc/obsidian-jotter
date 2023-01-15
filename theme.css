@@ -29,7 +29,7 @@ body {
 /* Dark Theme */
 .theme-dark {
     --background-primary: rgb(18, 22, 36); /* main background (note, settings) */
-    --background-primary-alt: hsla(227, 32%, 15%); /* code background, disabled buttons... */
+    --background-primary-alt: hsl(228, 32%, 15%); /* code background, disabled buttons... */
     --background-secondary: rgb(18, 22, 36); /* sidebars & top bar */
     --background-secondary-alt: rgb(18, 22, 36); /* top bar (window focused) */
 
@@ -47,8 +47,6 @@ body {
     --background-modifier-border-hover: hsla(227, 32%, 30%); /* turned off toggles */
 
     --background-modifier-form-field: var(--background-primary); /* inputs (kanban, settings, search) */
-
-    --background-modifier-box-shadow: hsla(227, 5%, 7%); /* tooltips shadows */
 
     --icon-color: var(--text-faint);
     --icon-color-hover: var(--text-muted); 
@@ -76,4 +74,48 @@ body {
 }
 
 /* Light Theme*/
-.theme-light {}
+.theme-light {
+    --background-primary: rgb(240, 244, 254); /* main background (note, settings) */
+    --background-primary-alt: rgb(229, 233, 247); /* code background, disabled buttons... */
+    --background-secondary: rgb(241, 244, 254); /* sidebars & top bar */
+    --background-secondary-alt: rgb(240, 244, 254); /* top bar (window focused) */
+
+    --divider-color: var(--background-primary); /* dividers */
+
+    --indentation-guide-color: var(--background-modifier-border); 
+    --indentation-guide-color-active: var(--background-modifier-border-hover);
+
+    --scrollbar-active-thumb-bg: var(--background-primary-alt);
+    --scrollbar-thumb-bg: var(--background-primary-alt);
+
+    --background-modifier-hover: var(--background-primary-alt); /* active and hovered tabs */
+
+    --background-modifier-border: hsla(227, 32%, 90%); /* tables outline, kanban lists and cards outline, canvas minimap & canvas buttons dividers outline, sliders */
+    --background-modifier-border-hover: hsla(227, 32%, 85%); /* turned off toggles */
+
+    --background-modifier-form-field: var(--background-primary); /* inputs (kanban, settings, search) */
+
+    --icon-color: var(--text-faint);
+    --icon-color-hover: var(--text-muted); 
+
+    --nav-item-background-active: var(--background-primary-alt); /* active file background in explorer */
+
+    --background-modifier-border-focus: var(--background-modifier-border); /* searchbar focus*/
+
+    --text-selection: var(--background-modifier-border);
+
+    --interactive-normal: var(--background-modifier-border); /* buttons, selectors (canvas, settings...) */
+    --interactive-hover: var(--background-modifier-border-hover); /* buttons, selectors hover color */
+    
+    --text-rgb: 11, 14, 20;
+    --text-normal: rgb(var(--text-rgb));
+    --text-muted: rgb(122, 129, 160);
+    --text-faint: rgb(186, 189, 203);
+
+    --h1-color: var(--text-normal);
+    --h2-color: var(--text-accent);
+    --h3-color: var(--text-normal);
+    --h4-color: rgb(var(--text-rgb), .6);
+    --h5-color: rgb(var(--text-rgb), .4);
+    --h6-color: rgb(var(--text-rgb), .2);
+}
