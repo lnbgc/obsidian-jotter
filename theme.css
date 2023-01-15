@@ -76,7 +76,7 @@ body {
 /* Light Theme*/
 .theme-light {
     --background-primary: rgb(240, 244, 254); /* main background (note, settings) */
-    --background-primary-alt: rgb(229, 233, 247); /* code background, disabled buttons... */
+    --background-primary-alt: rgb(226, 230, 245); /* code background, disabled buttons... */
     --background-secondary: rgb(241, 244, 254); /* sidebars & top bar */
     --background-secondary-alt: rgb(240, 244, 254); /* top bar (window focused) */
 
