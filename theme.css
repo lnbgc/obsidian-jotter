@@ -64,8 +64,8 @@ body {
 
     --background-modifier-border-focus: var(--background-modifier-border); /* searchbar focus*/
 
-    --text-selection: var(--background-modifier-border);
-
+    --text-selection: rgb(var(--text-rgb), .1);
+    
     --interactive-normal: var(--background-modifier-border); /* buttons, selectors (canvas, settings...) */
     --interactive-hover: var(--background-modifier-border-hover); /* buttons, selectors hover color */
     
@@ -73,7 +73,7 @@ body {
     --text-normal: rgb(var(--text-rgb));
     --text-muted: rgb(122, 129, 160);
     --text-faint: rgb(69, 75, 100);
-
+    
     --h1-color: var(--text-normal);
     --h2-color: var(--text-accent);
     --h3-color: var(--text-normal);
@@ -88,31 +88,31 @@ body {
     --background-primary-alt: rgb(226, 230, 245); /* code background, disabled buttons... */
     --background-secondary: rgb(241, 244, 254); /* sidebars & top bar */
     --background-secondary-alt: rgb(240, 244, 254); /* top bar (window focused) */
-
+    
     --divider-color: var(--background-primary); /* dividers */
-
+    
     --indentation-guide-color: hsla(227, 32%, 90%); 
     --indentation-guide-color-active: hsla(227, 20%, 70%);
-
+    
     --scrollbar-active-thumb-bg: var(--background-primary-alt);
     --scrollbar-thumb-bg: var(--background-primary-alt);
-
+    
     --background-modifier-hover: var(--background-primary-alt); /* active and hovered tabs */
-
+    
     --background-modifier-border: hsla(227, 32%, 90%); /* tables outline, kanban lists and cards outline, canvas minimap & canvas buttons dividers outline, sliders */
     --background-modifier-border-hover: hsla(227, 32%, 85%); /* turned off toggles */
-
+    
     --background-modifier-form-field: var(--background-primary); /* inputs (kanban, settings, search) */
-
+    
     --icon-color: var(--text-faint);
     --icon-color-hover: var(--text-muted); 
-
+    
     --nav-item-background-active: var(--background-primary-alt); /* active file background in explorer */
-
+    
     --background-modifier-border-focus: var(--background-modifier-border); /* searchbar focus*/
-
-    --text-selection: var(--background-modifier-border);
-
+    
+    --text-selection: rgb(var(--text-rgb), .1);
+    
     --interactive-normal: var(--background-modifier-border); /* buttons, selectors (canvas, settings...) */
     --interactive-hover: var(--background-modifier-border-hover); /* buttons, selectors hover color */
     
@@ -130,16 +130,16 @@ body {
 }
 
 /* H2 styling */
-body h2,
-body .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--text-accent);
+body.h2-underline h2,
+body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--h2-color);
     width: 100%;
     padding-bottom: 3px;
 }
 
 /* H3 styling */
-body h3,
-body .HyperMD-header.HyperMD-header-3 {
+body.h3-italics h3,
+body.h3-italics .HyperMD-header.HyperMD-header-3 {
     font-style: italic;
 }
 
@@ -150,8 +150,8 @@ body span.cm-strong {
 }
 
 /* Bold underline */
-body strong,
-body span.cm-strong {
+body.bold-underline strong,
+body.bold-underline span.cm-strong {
     border-bottom: 5.5px solid var(--bold-underline-color);
 }
 
@@ -162,8 +162,8 @@ body span.cm-em {
 }
 
 /* Italics underline */
-body em,
-body span.cm-em {
+body.em-underline em,
+body.em-underline span.cm-em {
     border-bottom: 5.5px solid var(--italic-underline-color);
 }
 
@@ -242,3 +242,133 @@ mark {
 .theme-light .kanban-plugin__item-title-wrapper {
     background-color: var(--background-primary);
 }
+
+
+/* @settings
+name: Jotter
+id: jotter-style
+settings:
+    -
+        id: headings
+        title: Headings
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: colors-headings
+        title: Colors
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: H1 color
+        id: h1-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        title: H2 color
+        id: h2-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        title: H3 color
+        id: h3-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        title: H4 color
+        id: h4-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        title: H5 color
+        id: h5-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        title: H6 color
+        id: h6-color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        id: styling-headings
+        title: Styling
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: H2 underline
+        id: h2-underline
+        description: Toggle H2 underline
+        type: class-toggle
+        default: false
+    -
+        title: H3 italics
+        id: h3-italics
+        description: Toggle H3 italics
+        type: class-toggle
+        default: true
+    -
+        id: typography
+        title: Typography
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: bold-text-typography
+        title: Bold text
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: strong-color
+        title: Bold font color
+        type: variable-color
+        format: hex
+        default: '#' 
+    -
+        id: bold-underline
+        title: Bold underline
+        description: Toggle bold underline
+        type: class-toggle
+        default: true
+    -
+        id: bold-underline-color
+        title: Bold underline color
+        description: Change bold underline color
+        type: variable-color
+        format: hex
+        default: '#5f7cff' 
+    -
+        id: italic-text-typography
+        title: Italic text
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: em-color
+        title: Italics color
+        type: variable-color
+        format: hex
+        default: '#' 
+    -
+        id: em-underline
+        title: Italics underline
+        description: Toggle italics underline
+        type: class-toggle
+        default: true
+    -
+        id: italic-underline-color
+        title: Italics underline color
+        description: Change italics underline color
+        type: variable-color
+        format: hex
+        default: '#f5d3a1' 
+    -
+*/
