@@ -49,6 +49,7 @@ I will try to include more customization options in the future, so keep an eye o
 Inspired by:
 - [Things](https://github.com/colineckert/obsidian-things)
 - [Fusion](https://github.com/zamsyt/obsidian-fusion)
+
 Go check out their work and support them!
 
 ## Screenshots
