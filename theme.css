@@ -1,0 +1,68 @@
+/* __________________________________________________ */
+/* Jotter */
+/* Obsidian Theme */
+/* Created by @lngbc - (https://github.com/lnbgc/obsidian-jotter/) */
+
+/* __________________________________________________ */
+
+/* Inspired by THINGS and FUSION themes, created by @colineckert and @zamsyt respectively. */
+/* Go check out their work at https://github.com/colineckert/obsidian-things and https://github.com/zamsyt/obsidian-fusion  */
+/* v1.0.0 */
+/* __________________________________________________ */
+
+:root {
+    --default-font: "Inter", Helvetica, sans-serif;
+    /* You can download the Inter font for free: */
+    /* https://fonts.google.com/specimen/Inter */
+}
+
+/* General Styling*/
+body {
+    --h1-size: 1.8em;
+    --h2-size: 1.6em;
+    --h3-size: 1.4em;
+    --h4-size: 1.2em;
+    --h5-size: 1em;
+    --h6-size: 1em;
+}
+
+/* Dark Theme */
+.theme-dark {
+    --background-primary: blue; /* main background (note, settings) */
+    --background-primary-alt: rgb(10, 10, 64); /* code background, disabled buttons... */
+    --background-secondary: green; /* sidebars & top bar */
+    --background-secondary-alt: yellow; /* top bar (window focused) */
+
+    --divider-color: purple; /* dividers */
+
+    --text-normal: red;
+    --text-muted: pink;
+    --text-faint: yellow;
+
+    --background-modifier-border: orange; /* tables outline, kanban lists and cards outline, canvas minimap & canvas buttons dividers outline, sliders */
+    --background-modifier-border-hover:green; /* turned off toggles */
+
+    --background-modifier-form-field: orange; /* inputs (kanban, settings, search) */
+
+    --background-modifier-box-shadow: red; /* tooltips shadows */
+
+    --icon-color: purple; /* icons */
+    --icon-color-hover: orange; /* icons when hovered */
+
+    --hr-color: green; /* horizontal line */
+
+    --text-selection: green;
+
+    --text-highlight-bg: orange;
+
+    --text-on-accent: green;
+
+    --interactive-normal: purple; /* buttons, selectors (canvas, settings...) */
+    --interactive-hover: pink; /* buttons, selectors hover color */
+
+    --interactive-accent: yellow; /* toggles (settings) */
+    --interactive-accent-hover: orange;
+}
+
+/* Light Theme*/
+.theme-light {}
