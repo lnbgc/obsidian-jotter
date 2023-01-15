@@ -26,7 +26,7 @@
 - Invisible note header (appears when the top of the note is hovered)
 - Rounded, prettier highlights
 - Style Settings support
-- Optimization and design adjuments for Canvas core plugin and [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin
+- Optimization and design adjustments for Canvas core plugin and [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin
 
 ## Customization
 
