@@ -24,6 +24,15 @@ body {
     --h4-size: 1.2em;
     --h5-size: 1em;
     --h6-size: 1em;
+
+    --blue: #5f7cff;
+    --yellow: #f5d3a1;
+
+    --strong-color: var(--text-normal);
+    --em-color: var(--text-normal);
+
+    --bold-underline-color: var(--blue);
+    --italic-underline-color: var(--yellow);
 }
 
 /* Dark Theme */
@@ -35,8 +44,8 @@ body {
 
     --divider-color: var(--background-primary); /* dividers */
 
-    --indentation-guide-color: var(--background-modifier-border); 
-    --indentation-guide-color-active: var(--background-modifier-border-hover);
+    --indentation-guide-color: hsla(227, 32%, 20%); 
+    --indentation-guide-color-active: hsla(227, 20%, 50%);
 
     --scrollbar-active-thumb-bg: var(--background-primary-alt);
     --scrollbar-thumb-bg: var(--background-primary-alt);
@@ -82,8 +91,8 @@ body {
 
     --divider-color: var(--background-primary); /* dividers */
 
-    --indentation-guide-color: var(--background-modifier-border); 
-    --indentation-guide-color-active: var(--background-modifier-border-hover);
+    --indentation-guide-color: hsla(227, 32%, 90%); 
+    --indentation-guide-color-active: hsla(227, 20%, 70%);
 
     --scrollbar-active-thumb-bg: var(--background-primary-alt);
     --scrollbar-thumb-bg: var(--background-primary-alt);
@@ -118,4 +127,118 @@ body {
     --h4-color: rgb(var(--text-rgb), .6);
     --h5-color: rgb(var(--text-rgb), .4);
     --h6-color: rgb(var(--text-rgb), .2);
+}
+
+/* H2 styling */
+body h2,
+body .HyperMD-header.HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--text-accent);
+    width: 100%;
+    padding-bottom: 3px;
+}
+
+/* H3 styling */
+body h3,
+body .HyperMD-header.HyperMD-header-3 {
+    font-style: italic;
+}
+
+/* Bold font */
+body strong,
+body span.cm-strong {
+    color: var(--strong-color);
+}
+
+/* Bold underline */
+body strong,
+body span.cm-strong {
+    border-bottom: 5.5px solid var(--bold-underline-color);
+}
+
+/* Italics */
+body em,
+body span.cm-em {
+    color: var(--em-color);
+}
+
+/* Italics underline */
+body em,
+body span.cm-em {
+    border-bottom: 5.5px solid var(--italic-underline-color);
+}
+
+/* Highlighted Text */
+.cm-highlight,
+mark {
+    border-radius: 5px;
+    padding: .1em .4em;
+}
+
+/* Completed checkboxes */
+.markdown-preview-view ul>li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
+    text-decoration: none;
+    color: var(--text-faint);
+}
+
+/* Kanban - Board */
+.kanban-plugin {
+    --dot-color: hsl(0 0% 40% / 25%);
+    --dot-spacing: 9px;
+    --dot-size: 1px;
+}
+
+.kanban-plugin__board {
+    background-image: radial-gradient(circle,
+            var(--dot-color) var(--dot-size),
+            transparent var(--dot-size));
+    border-top: var(--thin-border);
+    background-size: var(--dot-spacing) var(--dot-spacing);
+    background-attachment: local;
+}
+
+/* Kanban - Card outline */
+.kanban-plugin__item {
+    border: 2px solid rgb(var(--text-rgb), .1);
+}
+
+/* Kanban - Ajusting add card button */
+.kanban-plugin__item-button-wrapper button:not(.clickable-icon) {
+    box-shadow: none;
+    border: 1.5px solid rgb(var(--text-rgb), .1);
+}
+
+/* Kanban - Adjusting add list buttons */
+.kanban-plugin__lane-input-actions>button {
+    color: var(--text-normal);
+    background-color: var(--background-primary);
+}
+
+.kanban-plugin__lane-input-actions .kanban-plugin__lane-action-add:hover {
+    color: var(--background-primary);
+}
+
+.kanban-plugin__lane-input-actions .kanban-plugin__lane-action-cancel:hover {
+    background-color: var(--hr-color);
+}
+
+/* Kanban - List styles - Dark */
+.theme-dark .kanban-plugin__lane {
+    background-color: var(--background-primary);
+}
+
+/* Kanban - Card styles - Dark */
+.theme-dark .kanban-plugin__item-title-wrapper {
+    background-color: var(--background-primary-alt);
+}
+
+/* Kanban - List styles - Light */
+.theme-light .kanban-plugin__lane {
+    background-color: var(--background-primary-alt);
+}
+
+/* Kanban - Card styles - Light */
+.theme-light .kanban-plugin__item-title-wrapper {
+    background-color: var(--background-primary);
 }
