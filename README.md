@@ -57,3 +57,11 @@ Go check out their work and support them!
 ![Light Theme](./assets/screenshot1.png)
 
 ![Dark Theme](./assets/screenshot2.png)
+
+## Changelog
+
+#### v1.1.0
+
+Added the `Interface` menu in Style Settings.
+New option to pick between bordered and borderless styles on the interface.
+

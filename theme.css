@@ -35,14 +35,25 @@ body {
     --italic-underline-color: var(--yellow);
 }
 
+/* Bordered and borderless options */
+.border_visible {
+    --divider-color: var(--background-primary-alt);
+}
+
+.border_default {
+    --divider-color: var(--background-primary);
+}
+
+.border_default .setting-item {
+    border-top: none;
+}
+
 /* Dark Theme */
 .theme-dark {
     --background-primary: rgb(18, 22, 36); /* main background (note, settings) */
     --background-primary-alt: hsl(228, 32%, 15%); /* code background, disabled buttons... */
     --background-secondary: rgb(18, 22, 36); /* sidebars & top bar */
     --background-secondary-alt: rgb(18, 22, 36); /* top bar (window focused) */
-
-    --divider-color: var(--background-primary); /* dividers */
 
     --indentation-guide-color: hsla(227, 32%, 20%); 
     --indentation-guide-color-active: hsla(227, 20%, 50%);
@@ -88,8 +99,6 @@ body {
     --background-primary-alt: rgb(226, 230, 245); /* code background, disabled buttons... */
     --background-secondary: rgb(241, 244, 254); /* sidebars & top bar */
     --background-secondary-alt: rgb(240, 244, 254); /* top bar (window focused) */
-    
-    --divider-color: var(--background-primary); /* dividers */
     
     --indentation-guide-color: hsla(227, 32%, 90%); 
     --indentation-guide-color-active: hsla(227, 20%, 70%);
@@ -265,7 +274,7 @@ mark {
 }
 
 /* Header - Hiding note title + Removing unwanted fade after note title */
-body .view-header-title-container>*,
+body:not(.show-view-header-title) .view-header-title-container>*,
 .view-header-title-container::after {
     display: none;
 }
@@ -284,7 +293,7 @@ body .view-header-title-container>*,
         opacity: 0;
     }
     
-    body .view-header-title-container:not(:hover)>*:not(:focus) {
+    body.show-view-header-title .view-header-title-container:not(:hover)>*:not(:focus) {
         opacity: 0 !important;
     }
 }
@@ -307,6 +316,25 @@ body .view-header-title-container>*,
 name: Jotter
 id: jotter-style
 settings:
+    -
+        id: interface
+        title: Interface
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: border_style
+        title: Border Style
+        type: class-select
+        allowEmpty: false
+        default: border_default
+        options: 
+            - 
+                label: Borderless
+                value: border_default
+            - 
+                label: Bordered
+                value: border_visible
     -
         id: headings
         title: Headings
