@@ -265,7 +265,7 @@ mark {
 }
 
 /* Header - Hiding note title + Removing unwanted fade after note title */
-body:not(.show-view-header-title) .view-header-title-container>*,
+body .view-header-title-container>*,
 .view-header-title-container::after {
     display: none;
 }
@@ -284,7 +284,7 @@ body:not(.show-view-header-title) .view-header-title-container>*,
         opacity: 0;
     }
     
-    body.show-view-header-title .view-header-title-container:not(:hover)>*:not(:focus) {
+    body .view-header-title-container:not(:hover)>*:not(:focus) {
         opacity: 0 !important;
     }
 }

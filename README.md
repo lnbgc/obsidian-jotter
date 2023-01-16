@@ -54,6 +54,6 @@ Go check out their work and support them!
 
 ## Screenshots
 
-![Light Theme](./screenshot1.png)
+![Light Theme](./assets/screenshot1.png)
 
-![Dark Theme](./screenshot2.png)
+![Dark Theme](./assets/screenshot2.png)
