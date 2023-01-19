@@ -131,7 +131,7 @@ Additions to the Style Settings plugin:
 - 12 predefined accent colors, and the ability to still color-pick your own accent color
 - Display full file and folder titles in the explorer
 
-Improvments:
+Improvements:
 - Calendar
 - Default bold underline color is now set to the accent color
 - Kanban checkboxes
