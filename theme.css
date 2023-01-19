@@ -732,7 +732,7 @@ settings:
         default: false
     -
         id: border_style
-        title: Border Style
+        title: Border style
         type: class-select
         allowEmpty: false
         default: border-visible
@@ -776,13 +776,13 @@ settings:
         collapsed: true
     - 
         id: predefined-accent-color
-        title: Enable Accent Style
+        title: Enable predefined accent colors
         description: Enable to pick your accent color from the following list (when disabled, you'll be able to pick your accent color from the Appearance tab, as usual)
         type: class-toggle
         default: true
     - 
         id: predefined-accent-colors
-        title: Accent Colors
+        title: Accent colors
         description: Handpicked accent colors you can choose from
         type: class-select
         allowEmpty: false
