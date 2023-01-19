@@ -24,7 +24,7 @@
 - Modern and distraction-free design
 - Underlined **bold** and *italics* texts
 - Invisible note header (appears when the top of the note is hovered)
-- Rounded, prettier highlights
+- Rounded highlights
 - Style Settings support
 - Optimization and design adjustments for Canvas core plugin and [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin
 
@@ -34,34 +34,105 @@
 
 Meaning, you can customize your theme without having to get into the code part.
 
+- 6 color themes to choose from
+- 12 predefined accent colors and the ability to disable those predefined colors to choose your own
+- Borderless interface
+- Wrap file and folder titles in the explorer
 - Change headings colors
 - Toggle heading styles (underlines, italics) for H2s and H3s
-- Disable bold and italic texts underlines
-- Change bold and italic underline colors
 - Change bold and italic text colors
+- Change bold and italic underline colors
+- Disable bold and italic texts underlines
 
 *Download Style Settings through the Community Plugins page in Obsidian to start customizing Jotter theme!*
 
 I will try to include more customization options in the future, so keep an eye out for updates!
 
+## Color Themes and Accent Colors
+
+Some screenshots to showcase every theme and accent colors.
+Pick and match as you please!
+
+### Jotter
+
+*Light theme + Ultramarine accent*
+
+![Jotter Light](./assets/jotter-light-ultramarine.png)
+
+*Dark theme + Pumpkin accent*
+
+![Jotter Dark](./assets/jotter-dark-pumpkin.png)
+
+### Reporter
+
+*Light theme + Jade accent*
+
+![Reporter Light](./assets/reporter-light-jade.png)
+
+*Dark theme + Mustard accent*
+
+![Reporter Dark](./assets/reporter-dark-mustard.png)
+
+### Explorer
+
+*Light theme + Wine accent*
+
+![Explorer Light](./assets/explorer-light-wine.png)
+
+*Dark theme + Turquoise accent*
+
+![Explorer Dark](./assets/explorer-dark-turquoise.png)
+
+### Keeper
+
+*Light theme + Denim accent*
+
+![Keeper Light](./assets/keeper-light-denim.png)
+
+*Dark theme + Slate accent*
+
+![Keeper Dark](./assets/keeper-dark-slate.png)
+
+### Undercover
+
+*Light theme + Mauve accent*
+
+![Undercover Light](./assets/undercover-light-mauve.png)
+
+*Dark theme + Bubblegum accent*
+
+![Undercover Dark](./assets/undercover-dark-bubblegum.png)
+
 ## Credits
 
 Inspired by:
-- [Things](https://github.com/colineckert/obsidian-things)
-- [Fusion](https://github.com/zamsyt/obsidian-fusion)
 
-Go check out their work and support them!
+- [Things](https://github.com/colineckert/obsidian-things) - @colineckert
+- [Fusion](https://github.com/zamsyt/obsidian-fusion) - @zamsyt
+- [Sanctum]( https://github.com/jdanielmourao/obsidian-sanctum) - @jdanielmourao
+- [Yin and Yang](https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme) - @chetachiezikeuzor
+- [Golden Topaz](https://github.com/shaggyfeng/obsidian-Golden-Topaz-theme) - @shaggyfeng
 
-## Screenshots
-
-![Light Theme](./assets/screenshot1.png)
-
-![Dark Theme](./assets/screenshot2.png)
+Go check out everyone’s work and support them!
 
 ## Changelog
 
-#### v1.1.0
+#### v.1.1.0
 
 Added the `Interface` menu in Style Settings.
 New option to pick between bordered and borderless styles on the interface.
 
+#### v.2.0.0
+
+Big update for Jotter!
+
+Additions to the Style Settings plugin:
+- 5 additional color themes (including the Obsidian default theme)
+- 12 predefined accent colors, and the ability to still color-pick your own accent color
+- Display full file and folder titles in the explorer
+
+Improvments:
+- Calendar
+- Default bold underline color is now set to the accent color
+- Kanban checkboxes
+- Code refractor

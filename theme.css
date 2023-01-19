@@ -1,22 +1,21 @@
 /* __________________________________________________ */
 /* Jotter */
 /* Obsidian Theme */
-/* Created by @lngbc - (https://github.com/lnbgc/obsidian-jotter/) */
-
+/* Created by @lnbgc - (https://github.com/lnbgc/obsidian-jotter/) */
+/* v2.0.0 */
 /* __________________________________________________ */
 
-/* Inspired by THINGS and FUSION themes, created by @colineckert and @zamsyt respectively. */
-/* Go check out their work at https://github.com/colineckert/obsidian-things and https://github.com/zamsyt/obsidian-fusion  */
-/* v1.0.0 */
-/* __________________________________________________ */
+/* 
+Inspired by:
 
-:root {
-    --default-font: "Inter", Helvetica, sans-serif;
-    /* You can download the Inter font for free: */
-    /* https://fonts.google.com/specimen/Inter */
-}
+THINGS - @colineckert - https://github.com/colineckert/obsidian-things
+FUSION - @zamsyt - https://github.com/zamsyt/obsidian-fusion  
+SANCTUM - @jdanielmourao - https://github.com/jdanielmourao/obsidian-sanctum
+YIN AND YANG - @chetachiezikeuzor - https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme
+GOLDEN TOPAZ - @shaggyfeng - https://github.com/shaggyfeng/obsidian-Golden-Topaz-theme
 
-/* General Styling*/
+*/
+
 body {
     --h1-size: 1.8em;
     --h2-size: 1.6em;
@@ -25,173 +24,592 @@ body {
     --h5-size: 1em;
     --h6-size: 1em;
 
-    --blue: #5f7cff;
+    --h1-color: rgb(var(--text-rgb));
+    --h2-color: var(--text-accent);
+    --h3-color: rgb(var(--text-rgb));
+    --h4-color: rgb(var(--text-rgb), .7);
+    --h5-color: rgb(var(--text-rgb), .5);
+    --h6-color: rgb(var(--text-rgb), .3);
+
+    --icon-color: var(--text-faint);
+    --icon-color-hover: var(--text-muted);
+    --icon-color-focused: rgb(var(--text-rgb));
+
     --yellow: #f5d3a1;
 
     --strong-color: var(--text-normal);
     --em-color: var(--text-normal);
 
-    --bold-underline-color: var(--blue);
+    --bold-underline-color: var(--text-accent);
     --italic-underline-color: var(--yellow);
+
+    --background-modifier-border-focus: var(--background-modifier-border);
+    --background-modifier-active-hover: rgb(var(--accent), .25);
 }
 
-/* Bordered and borderless options */
-.border_visible {
-    --divider-color: var(--background-primary-alt);
+/* Defaults ------------------------------------------------------------ */
+.theme-dark {
+    --background-secondary-alt: var(--background-secondary);
+    --text-selection: rgb(var(--text-rgb), .1);
 }
 
-.border_default {
-    --divider-color: var(--background-primary);
+.theme-light {
+    --background-secondary-alt: var(--background-secondary);
+    --text-selection: rgb(var(--text-rgb), .1);
 }
 
-.border_default .setting-item {
+/* Obsidian theme ------------------------------------------------------------ */
+.theme-dark.ct-obsidian {
+    --background-secondary-alt: var(--background-secondary);
+    --interactive-normal: var(--interactive-normal);
+}
+
+.theme-light.ct-obsidian {
+    --background-secondary-alt: var(--background-secondary);
+    --interactive-normal: var(--interactive-normal);
+}
+
+.ct-obsidian .day.svelte-q3wqg9:hover {
+    background-color: var(--color-base-30);
+}
+
+/* Jotter theme ------------------------------------------------------------ */
+.theme-dark.ct-jotter {
+    --background-primary: #121624;
+    --background-primary-alt: #1a1f32;
+    --background-secondary: #121624;
+
+    --nav-item-background-active: hsl(228, 31%, 19%);
+    --background-modifier-hover: var(--nav-item-background-active);
+
+    --background-modifier-border: hsla(227, 32%, 20%);
+    --background-modifier-border-hover: hsla(227, 32%, 25%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsla(227, 20%, 50%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 195, 205, 250;
+    --text-normal: #c3cdfa;
+    --text-muted: #7a81a0;
+    --text-faint: #454b64;
+}
+
+.theme-light.ct-jotter {
+    --background-primary: #f0f4fe;
+    --background-primary-alt: #e2e6f5;
+    --background-secondary: #f1f4fe;
+
+    --background-modifier-hover: var(--background-primary-alt);
+
+    --background-modifier-border: hsla(227, 32%, 90%);
+    --background-modifier-border-hover: hsla(227, 32%, 87%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsla(227, 20%, 70%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 32, 38, 51;
+    --text-normal: #202633;
+    --text-muted: #7f859e;
+    --text-faint: #b1b8d3;
+}
+
+/* Reporter theme ------------------------------------------------------------ */
+.theme-dark.ct-reporter {
+    --background-primary: #252423;
+    --background-primary-alt: #302e2c;
+    --background-secondary: #21201f;
+
+    --background-modifier-border: hsla(37, 10%, 20%);
+    --background-modifier-border-hover: hsla(37, 10%, 25%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(37, 10%, 40%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 215, 205, 193;
+    --text-normal: #d7cdc1;
+    --text-muted: #938d89;
+    --text-faint: #575351;
+}
+
+.theme-light.ct-reporter {
+    --background-primary: #fdf8ef;
+    --background-primary-alt: #eae0d3;
+    --background-secondary: #f9f2e7;
+
+    --code-background: #f3ece3;
+
+    --background-modifier-border: hsla(37, 28%, 85%);
+    --background-modifier-border-hover: hsla(37, 28%, 90%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(37, 10%, 55%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 46, 44, 42;
+    --text-normal: #2e2c2a;
+    --text-muted: #908782;
+    --text-faint: #b9b2ad;
+}
+
+/* Explorer theme ------------------------------------------------------------ */
+.theme-dark.ct-explorer {
+    --background-primary: #161616;
+    --background-primary-alt: #333232;
+    --background-secondary: #161616;
+
+    --nav-item-background-active: var(--code-background);
+    --code-background: #282727;
+
+    --background-modifier-border: hsl(30, 1%, 23%);
+    --background-modifier-border-hover: hsl(30, 1%, 33%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(30, 1%, 43%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 240, 240, 240;
+    --text-normal: #f4f4f0;
+    --text-muted: #a6a4a1;
+    --text-faint: #555453;
+}
+
+.theme-light.ct-explorer {
+    --background-primary: #e7e5d0;
+    --background-primary-alt: #dad7c3;
+    --background-secondary: #e7e5d0;
+
+    --code-background: #dedac5;
+
+    --background-modifier-border: hsl(55, 20%, 75%);
+    --background-modifier-border-hover: hsl(55, 20%, 70%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(55, 20%, 50%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 0, 0, 0;
+    --text-normal: rgb(0, 0, 0);
+    --text-muted: rgb(76, 80, 100);
+    --text-faint: rgb(135, 140, 161);
+}
+
+/* Keeper theme ------------------------------------------------------------ */
+.theme-dark.ct-keeper {
+    --background-primary: #2e3440;
+    --background-primary-alt: #3B4252;
+    --background-secondary: #2e3440;
+
+    --background-modifier-hover: var(--background-primary-alt);
+
+    --background-modifier-border: hsl(222, 16%, 28%);
+    --background-modifier-border-hover: hsl(222, 16%, 33%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(220, 17%, 48%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 236, 239, 244;
+    --text-normal: #eceff4;
+    --text-muted: #969ba4;
+    --text-faint: #656971;
+
+    --color-red: #bf616a;
+    --color-red-rgb: 191, 97, 106;
+
+    --color-green: #8fbcbb;
+    --color-green-rgb: 143, 188, 187;
+
+    --color-orange: #d08770;
+    --color-orange-rgb: 208, 135, 112;
+
+    --color-yellow: #ebc88b;
+    --color-yellow-rgb: 235, 200, 139;
+
+    --color-cyan: #88c0d0;
+    --color-cyan-rgb: 136, 192, 208;
+
+    --color-blue: #81a1c1;
+    --color-blue-rgb: 129, 161, 193;
+
+    --color-purple: #8b81c1;
+    --color-purple-rgb: 139, 129, 193;
+
+    --color-pink: #bd81c1;
+    --color-pink-rgb: 189, 129, 193;
+}
+
+.theme-light.ct-keeper {
+    --background-primary: #d8dee9;
+    --background-primary-alt: #c5cdda;
+    --background-secondary: #d8dee9;
+
+    --code-background: #d0d8e4;
+
+    --background-modifier-hover: var(--background-primary-alt);
+
+    --background-modifier-border: hsl(230, 14%, 75%);
+    --background-modifier-border-hover: hsl(230, 14%, 80%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(220, 17%, 48%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 46, 52, 64;
+    --text-normal: #2e3440;
+    --text-muted: #627089;
+    --text-faint: #95a6c7;
+
+    --color-red: #bf616a;
+    --color-red-rgb: 191, 97, 106;
+
+    --color-green: #8fbcbb;
+    --color-green-rgb: 143, 188, 187;
+
+    --color-orange: #d08770;
+    --color-orange-rgb: 208, 135, 112;
+
+    --color-yellow: #ebc88b;
+    --color-yellow-rgb: 235, 200, 139;
+
+    --color-cyan: #88c0d0;
+    --color-cyan-rgb: 136, 192, 208;
+
+    --color-blue: #81a1c1;
+    --color-blue-rgb: 129, 161, 193;
+
+    --color-purple: #8b81c1;
+    --color-purple-rgb: 139, 129, 193;
+
+    --color-pink: #bd81c1;
+    --color-pink-rgb: 189, 129, 193;
+}
+
+/* Undercover theme ------------------------------------------------------------ */
+.theme-dark.ct-undercover {
+    --background-primary: #08090D;
+    --background-primary-alt: #171c23;
+    --background-secondary: #090C10;
+
+    --background-modifier-hover: rgb(31, 37, 47);
+
+    --background-modifier-border: hsl(219, 20%, 27%);
+    --background-modifier-border-hover: hsl(219, 20%, 37%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(221, 16%, 47%);
+
+    --interactive-normal: #1d232c;
+    --interactive-hover: #242c36;
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 239, 240, 242;
+    --text-normal: rgb(239, 240, 242);
+    --text-muted: rgb(123, 135, 160);
+    --text-faint: rgb(75, 88, 112);
+}
+
+.theme-light.ct-undercover {
+    --background-primary: #FCFCFC;
+    --background-primary-alt: #dbe1eb;
+    --background-secondary: #EFF1F5;
+
+    --code-background: #eaf0f8;
+
+    --background-modifier-hover: var(--background-primary-alt);
+
+    --background-modifier-border: hsl(218, 11%, 86%);
+    --background-modifier-border-hover: hsl(218, 11%, 81%);
+
+    --indentation-guide-color: var(--background-modifier-border);
+    --indentation-guide-color-active: hsl(218, 11%, 66%);
+
+    --interactive-normal: var(--background-secondary);
+    --interactive-hover: var(--background-primary-alt);
+
+    --background-modifier-form-field: var(--background-primary);
+
+    --text-rgb: 33, 40, 52;
+    --text-normal: #212834;
+    --text-muted: #7787A9;
+    --text-faint: #A1ACC2;
+}
+
+/* Interface ------------------------------------------------------------ */
+.nav-buttons-container {
+    justify-content: flex-start;
+}
+
+.nav-action-button[aria-label="New note"]>svg {
+    stroke: var(--text-accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+    padding-right: 8px;
+}
+
+.nav-files-container {
+    padding: 0 var(--size-4-2) var(--size-4-6) var(--size-4-2);
+}
+
+.workspace-tab-header-inner-close-button[aria-label="Close"]>svg {
+    stroke: var(--text-faint);
+}
+
+.collapse-icon svg.svg-icon {
+    stroke-width: 2px;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+    background-color: var(--background-secondary);
+}
+
+.wrap-titles {
+    --nav-item-white-space: wrap;
+}
+
+/* Header ------------------------------------------------------------ */
+:root:root:root .view-header {
+    background: transparent;
+}
+
+.view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
+    padding-top: 2em;
+}
+
+.view-header {
+    position: absolute;
+    width: 100%;
+}
+
+body .view-header-title-container>*,
+.view-header-title-container::after {
+    display: none;
+}
+
+:root .view-header .clickable-icon {
+    background-color: var(--background-primary);
+    opacity: .95;
+}
+
+@media (hover: hover) {
+
+    :root:root .workspace-tab-header:not(:hover) .workspace-tab-header-inner-close-button,
+    .workspace-tab-header-container:not(:hover)+* .view-header:not(:hover) .clickable-icon {
+        opacity: 0;
+    }
+
+    body .view-header-title-container:not(:hover)>*:not(:focus) {
+        opacity: 0 !important;
+    }
+}
+
+@media (hover: none) {
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
+        opacity: 0;
+    }
+
+    .view-header {
+        pointer-events: none;
+    }
+
+    .view-header .clickable-icon {
+        pointer-events: auto;
+    }
+}
+
+.canvas-controls,
+.kanban-plugin {
+    margin-top: 2em;
+}
+
+/* Borders ------------------------------------------------------------ */
+.border-invisible {
+    --divider-color: transparent;
+}
+
+.border-invisible .workspace-ribbon.mod-left:before {
+    border-bottom-color: var(--background-secondary);
+}
+
+.border-visible .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+    border-right: 1px solid var(--divider-color);
+    box-shadow: var(--tab-stacked-shadow);
+}
+
+.border-invisible .setting-item {
     border-top: none;
 }
 
-/* Dark Theme */
-.theme-dark {
-    --background-primary: rgb(18, 22, 36); /* main background (note, settings) */
-    --background-primary-alt: hsl(228, 32%, 15%); /* code background, disabled buttons... */
-    --background-secondary: rgb(18, 22, 36); /* sidebars & top bar */
-    --background-secondary-alt: rgb(18, 22, 36); /* top bar (window focused) */
-
-    --indentation-guide-color: hsla(227, 32%, 20%); 
-    --indentation-guide-color-active: hsla(227, 20%, 50%);
-
-    --scrollbar-active-thumb-bg: var(--background-primary-alt);
-    --scrollbar-thumb-bg: var(--background-primary-alt);
-
-    --background-modifier-hover: var(--background-primary-alt); /* active and hovered tabs */
-
-    --background-modifier-border: hsla(227, 32%, 20%); /* tables outline, kanban lists and cards outline, canvas minimap & canvas buttons dividers outline, sliders */
-    --background-modifier-border-hover: hsla(227, 32%, 30%); /* turned off toggles */
-
-    --background-modifier-form-field: var(--background-primary); /* inputs (kanban, settings, search) */
-
-    --icon-color: var(--text-faint);
-    --icon-color-hover: var(--text-muted); 
-
-    --nav-item-background-active: var(--background-primary-alt); /* active file background in explorer */
-
-    --background-modifier-border-focus: var(--background-modifier-border); /* searchbar focus*/
-
-    --text-selection: rgb(var(--text-rgb), .1);
-    
-    --interactive-normal: var(--background-modifier-border); /* buttons, selectors (canvas, settings...) */
-    --interactive-hover: var(--background-modifier-border-hover); /* buttons, selectors hover color */
-    
-    --text-rgb: 195, 205, 250;
-    --text-normal: rgb(var(--text-rgb));
-    --text-muted: rgb(122, 129, 160);
-    --text-faint: rgb(69, 75, 100);
-    
-    --h1-color: var(--text-normal);
-    --h2-color: var(--text-accent);
-    --h3-color: var(--text-normal);
-    --h4-color: rgb(var(--text-rgb), .6);
-    --h5-color: rgb(var(--text-rgb), .4);
-    --h6-color: rgb(var(--text-rgb), .2);
+/* Calendar ------------------------------------------------------------ */
+.day.has-note>.dot-container>svg {
+    fill: var(--text-accent);
 }
 
-/* Light Theme*/
-.theme-light {
-    --background-primary: rgb(240, 244, 254); /* main background (note, settings) */
-    --background-primary-alt: rgb(226, 230, 245); /* code background, disabled buttons... */
-    --background-secondary: rgb(241, 244, 254); /* sidebars & top bar */
-    --background-secondary-alt: rgb(240, 244, 254); /* top bar (window focused) */
-    
-    --indentation-guide-color: hsla(227, 32%, 90%); 
-    --indentation-guide-color-active: hsla(227, 20%, 70%);
-    
-    --scrollbar-active-thumb-bg: var(--background-primary-alt);
-    --scrollbar-thumb-bg: var(--background-primary-alt);
-    
-    --background-modifier-hover: var(--background-primary-alt); /* active and hovered tabs */
-    
-    --background-modifier-border: hsla(227, 32%, 90%); /* tables outline, kanban lists and cards outline, canvas minimap & canvas buttons dividers outline, sliders */
-    --background-modifier-border-hover: hsla(227, 32%, 85%); /* turned off toggles */
-    
-    --background-modifier-form-field: var(--background-primary); /* inputs (kanban, settings, search) */
-    
-    --icon-color: var(--text-faint);
-    --icon-color-hover: var(--text-muted); 
-    
-    --nav-item-background-active: var(--background-primary-alt); /* active file background in explorer */
-    
-    --background-modifier-border-focus: var(--background-modifier-border); /* searchbar focus*/
-    
-    --text-selection: rgb(var(--text-rgb), .1);
-    
-    --interactive-normal: var(--background-modifier-border); /* buttons, selectors (canvas, settings...) */
-    --interactive-hover: var(--background-modifier-border-hover); /* buttons, selectors hover color */
-    
-    --text-rgb: 11, 14, 20;
-    --text-normal: rgb(var(--text-rgb));
-    --text-muted: rgb(122, 129, 160);
-    --text-faint: rgb(186, 189, 203);
-
-    --h1-color: var(--text-normal);
-    --h2-color: var(--text-accent);
-    --h3-color: var(--text-normal);
-    --h4-color: rgb(var(--text-rgb), .6);
-    --h5-color: rgb(var(--text-rgb), .4);
-    --h6-color: rgb(var(--text-rgb), .2);
+.day.has-note.active {
+    background-color: var(--background-modifier-border-hover);
+    color: var(--text-normal);
 }
 
-/* H2 styling */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--h2-color);
-    width: 100%;
-    padding-bottom: 3px;
+.day.has-note.active:hover {
+    color: var(--background-secondary);
 }
 
-/* H3 styling */
-body.h3-italics h3,
-body.h3-italics .HyperMD-header.HyperMD-header-3 {
-    font-style: italic;
+.day.has-note.active:hover>.dot-container>svg {
+    fill: var(--background-secondary);
 }
 
-/* Bold font */
-body strong,
-body span.cm-strong {
-    color: var(--strong-color);
+.day.has-note.active.today>.dot-container>svg {
+    fill: var(--background-secondary);
 }
 
-/* Bold underline */
-body.bold-underline strong,
-body.bold-underline span.cm-strong {
-    border-bottom: 5.5px solid var(--bold-underline-color);
+.day.today {
+    font-weight: 600;
 }
 
-/* Italics */
-body em,
-body span.cm-em {
-    color: var(--em-color);
+/* Accent colors -------------------------------------------------------- */
+.predefined-accent-color {
+    --text-accent: rgb(var(--accent));
+    --color-accent: rgb(var(--accent));
+    --interactive-accent: rgb(var(--accent));
+
+    --tag-background: rgb(var(--accent), .2);
+    --tag-background-hover: rgb(var(--accent), .3);
+
+    --text-accent-hover: rgb(var(--accent), 0.8);
+    --interactive-accent-hover: rgb(var(--accent), 0.8);
+
+    --brick: 243, 90, 55;
+    --pumpkin: 246, 141, 69;
+    --mustard: 255, 208, 113;
+    --jade: 0, 168, 107;
+    --forest: 77, 116, 53;
+    --turquoise: 120, 230, 232;
+    --ultramarine: 92, 124, 255;
+    --denim: 76, 80, 120;
+    --mauve: 122, 73, 136;
+    --bubblegum: 255, 179, 189;
+    --wine: 114, 47, 55;
+    --slate: 131, 142, 154;
 }
 
-/* Italics underline */
-body.em-underline em,
-body.em-underline span.cm-em {
-    border-bottom: 5.5px solid var(--italic-underline-color);
+.predefined-accent-color.accent-pumpkin {
+    --accent: var(--pumpkin)
 }
 
-/* Highlighted Text */
-.cm-highlight,
-mark {
-    border-radius: 5px;
-    padding: .1em .4em;
+.predefined-accent-color.accent-mustard {
+    --accent: var(--mustard)
 }
 
-/* Completed checkboxes */
-.markdown-preview-view ul>li.task-list-item.is-checked,
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
-    text-decoration: none;
-    color: var(--text-faint);
+.predefined-accent-color.accent-bubblegum {
+    --accent: var(--bubblegum)
 }
 
-/* Kanban - Board */
+.predefined-accent-color.accent-wine {
+    --accent: var(--wine)
+}
+
+.predefined-accent-color.accent-mauve {
+    --accent: var(--mauve)
+}
+
+.predefined-accent-color.accent-brick {
+    --accent: var(--brick)
+}
+
+.predefined-accent-color.accent-jade {
+    --accent: var(--jade)
+}
+
+.predefined-accent-color.accent-forest {
+    --accent: var(--forest)
+}
+
+.predefined-accent-color.accent-denim {
+    --accent: var(--denim)
+}
+
+.predefined-accent-color.accent-turquoise {
+    --accent: var(--turquoise)
+}
+
+.predefined-accent-color.accent-ultramarine {
+    --accent: var(--ultramarine)
+}
+
+.predefined-accent-color.accent-slate {
+    --accent: var(--slate)
+}
+
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
+    visibility: hidden;
+    width: 12rem;
+}
+
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control .lucide-rotate-ccw {
+    display: none;
+}
+
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
+    visibility: visible;
+    content: "Download the Style Settings plugin to pick your accent colors.";
+    color: var(--text-error);
+    font-size: var(--font-ui-smaller);
+}
+
+/* Canvas -------------------------------------------------------- */
+.canvas-card-menu .canvas-card-menu-button.mod-draggable {
+    stroke: var(--accent);
+}
+
+/* Kanban -------------------------------------------------------- */
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+    filter: none;
+}
+
+.kanban-plugin__lane-form-wrapper {
+    border-color: var(--text-accent);
+}
+
+.kanban-plugin__item-prefix-button-wrapper>input[type=checkbox]:checked:after {
+    -webkit-mask-position: 30% 40%;
+}
+
 .kanban-plugin {
     --dot-color: hsl(0 0% 40% / 25%);
     --dot-spacing: 9px;
@@ -207,18 +625,19 @@ mark {
     background-attachment: local;
 }
 
-/* Kanban - Card outline */
 .kanban-plugin__item {
-    border: 2px solid rgb(var(--text-rgb), .1);
+    border: 1.5px solid var(--background-modifier-border);
 }
 
-/* Kanban - Ajusting add card button */
+.kanban-plugin__lane-items>div {
+    margin-top: .5rem;
+}
+
 .kanban-plugin__item-button-wrapper button:not(.clickable-icon) {
     box-shadow: none;
     border: 1.5px solid rgb(var(--text-rgb), .1);
 }
 
-/* Kanban - Adjusting add list buttons */
 .kanban-plugin__lane-input-actions>button {
     color: var(--text-normal);
     background-color: var(--background-primary);
@@ -229,92 +648,75 @@ mark {
 }
 
 .kanban-plugin__lane-input-actions .kanban-plugin__lane-action-cancel:hover {
-    background-color: var(--hr-color);
+    background-color: var(--background-modifier-border);
 }
 
-/* Kanban - List styles - Dark */
 .theme-dark .kanban-plugin__lane {
     background-color: var(--background-primary);
 }
 
-/* Kanban - Card styles - Dark */
 .theme-dark .kanban-plugin__item-title-wrapper {
     background-color: var(--background-primary-alt);
 }
 
-/* Kanban - List styles - Light */
 .theme-light .kanban-plugin__lane {
     background-color: var(--background-primary-alt);
 }
 
-/* Kanban - Card styles - Light */
 .theme-light .kanban-plugin__item-title-wrapper {
     background-color: var(--background-primary);
 }
 
-/* Header - Transparent (to avoid overlaps)*/
-:root:root:root .view-header {
-    background: transparent;
+/* Typography------------------------------------------------------- */
+body strong,
+body span.cm-strong {
+    color: var(--strong-color);
 }
 
-/* Header - Ajusting top padding on note */
-.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
-    padding-top: 2em;
+body.bold-underline strong,
+body.bold-underline span.cm-strong {
+    border-bottom: 5.5px solid var(--bold-underline-color);
 }
 
-/* Header - Repositioning header */
-.view-header {
-    position: absolute;
+body em,
+body span.cm-em {
+    color: var(--em-color);
+}
+
+body.em-underline em,
+body.em-underline span.cm-em {
+    border-bottom: 5.5px solid var(--italic-underline-color);
+}
+
+.markdown-preview-view ul>li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
+    text-decoration: none;
+    color: var(--text-faint);
+}
+
+.cm-highlight,
+mark {
+    border-radius: 5px;
+    padding: .1em .4em;
+}
+
+/* Headings ------------------------------------------------------- */
+body.h2-underline h2,
+body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--h2-color);
     width: 100%;
+    padding-bottom: 3px;
 }
 
-/* Header - Adjusting header position for Canvas and Kanban */
-.canvas-controls, .kanban-plugin {
-    margin-top: 2em;
-}
-
-/* Header - Hiding note title + Removing unwanted fade after note title */
-body:not(.show-view-header-title) .view-header-title-container>*,
-.view-header-title-container::after {
-    display: none;
-}
-
-/* Header - Re-adding background on buttons */
-:root .view-header .clickable-icon {
-    background-color: var(--background-primary);
-    opacity: .95;
-}
-
-/* Header - Show header only on hover */
-@media (hover: hover) {
-    
-    :root:root .workspace-tab-header:not(:hover) .workspace-tab-header-inner-close-button,
-    .workspace-tab-header-container:not(:hover)+* .view-header:not(:hover) .clickable-icon {
-        opacity: 0;
-    }
-    
-    body.show-view-header-title .view-header-title-container:not(:hover)>*:not(:focus) {
-        opacity: 0 !important;
-    }
-}
-
-@media (hover: none) {
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
-        opacity: 0;
-    }
-    
-    .view-header {
-        pointer-events: none;
-    }
-    
-    .view-header .clickable-icon {
-        pointer-events: auto;
-    }
+body.h3-italics h3,
+body.h3-italics .HyperMD-header.HyperMD-header-3 {
+    font-style: italic;
 }
 
 /* @settings
 name: Jotter
-id: jotter-style
+id: jotter
 settings:
     -
         id: interface
@@ -323,30 +725,133 @@ settings:
         level: 2
         collapsed: true
     -
+        id: wrap-titles
+        title: Wrap titles
+        description: Show the full name of files in the explorer (no ellipsis)
+        type: class-toggle
+        default: false
+    -
         id: border_style
         title: Border Style
         type: class-select
         allowEmpty: false
-        default: border_default
+        default: border-visible
         options: 
             - 
-                label: Borderless
-                value: border_default
+                label: Invisible
+                value: border-invisible
             - 
-                label: Bordered
-                value: border_visible
+                label: Visible
+                value: border-visible
     -
-        id: headings
+        id: color-scheme
+        title: Additional color themes
+        type: class-select
+        allowEmpty: false
+        default: ct-jotter        
+        options:
+            -     
+                label: Jotter
+                value: ct-jotter
+            -
+                label: Reporter
+                value: ct-reporter
+            - 
+                label: Explorer
+                value: ct-explorer        
+            -
+                label: Keeper
+                value: ct-keeper
+            -
+                label: Undercover
+                value: ct-undercover
+            -     
+                label: Obsidian default
+                value: ct-obsidian
+	-
+        id: accent-colors
+        title: Accent Colors
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: predefined-accent-color
+        title: Enable Accent Style
+        description: Adjust the theme style with the accents below
+        type: class-toggle
+        default: true
+    - 
+        id: predefined-accent-colors
+        title: Accent Colors
+        description: Handpicked accent colors you can choose from
+        type: class-select
+        allowEmpty: false
+        default: accent-ultramarine
+        options:
+            - 
+                label: Brick
+                value: accent-brick
+            - 
+                label: Pumpkin
+                value: accent-pumpkin
+            - 
+                label: Mustard
+                value: accent-mustard
+            - 
+                label: Jade
+                value: accent-jade
+            - 
+                label: Forest
+                value: accent-forest
+            - 
+                label: Turquoise
+                value: accent-turquoise
+            - 
+                label: Ultramarine
+                value: accent-ultramarine
+            - 
+                label: Denim
+                value: accent-denim
+            - 
+                label: Mauve
+                value: accent-mauve
+            -  
+                label: Wine
+                value: accent-wine
+            -  
+                label: Bubblegum
+                value: accent-bubblegum
+            -
+                label: Slate
+                value: accent-slate
+    -
+        id: heading
         title: Headings
         type: heading
         level: 2
         collapsed: true
     -
+        id: styling-headings
+        title: Styling
+        type: heading
+        level: 3
+    -
+        title: H2 underline
+        id: h2-underline
+        description: Toggle H2 underline
+        type: class-toggle
+        default: false
+    -
+        title: H3 italics
+        id: h3-italics
+        description: Toggle H3 italics
+        type: class-toggle
+        default: true
+    -
         id: colors-headings
         title: Colors
         type: heading
         level: 3
-        collapsed: true
     -
         title: H1 color
         id: h1-color
@@ -384,24 +889,6 @@ settings:
         format: hex
         default: '#'
     -
-        id: styling-headings
-        title: Styling
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        title: H2 underline
-        id: h2-underline
-        description: Toggle H2 underline
-        type: class-toggle
-        default: false
-    -
-        title: H3 italics
-        id: h3-italics
-        description: Toggle H3 italics
-        type: class-toggle
-        default: true
-    -
         id: typography
         title: Typography
         type: heading
@@ -412,7 +899,6 @@ settings:
         title: Bold text
         type: heading
         level: 3
-        collapsed: true
     -
         id: strong-color
         title: Bold font color
@@ -428,16 +914,15 @@ settings:
     -
         id: bold-underline-color
         title: Bold underline color
-        description: Change bold underline color
+        description: Change bold underline color (dy default, it is set to be the same as your accent color)
         type: variable-color
         format: hex
-        default: '#5f7cff' 
+        default: 'var(--text-accent)' 
     -
         id: italic-text-typography
         title: Italic text
         type: heading
         level: 3
-        collapsed: true
     -
         id: em-color
         title: Italics color
@@ -456,6 +941,6 @@ settings:
         description: Change italics underline color
         type: variable-color
         format: hex
-        default: '#f5d3a1' 
+        default: 'var(--yellow)' 
     -
 */
