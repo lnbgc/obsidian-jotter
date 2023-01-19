@@ -777,7 +777,7 @@ settings:
     - 
         id: predefined-accent-color
         title: Enable Accent Style
-        description: Adjust the theme style with the accents below
+        description: Enable to pick your accent color from the following list (when disabled, you'll be able to pick your accent color from the Appearance tab, as usual)
         type: class-toggle
         default: true
     - 
