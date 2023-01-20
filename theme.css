@@ -2,7 +2,7 @@
 /* Jotter */
 /* Obsidian Theme */
 /* Created by @lnbgc - (https://github.com/lnbgc/obsidian-jotter/) */
-/* v2.0.0 */
+/* v2.1.0 */
 /* __________________________________________________ */
 
 /* 
@@ -727,12 +727,15 @@ settings:
     -
         id: wrap-titles
         title: Wrap titles
+        title.fr: Explorateur de fichiers
         description: Show the full name of files in the explorer (no ellipsis)
+        description.fr: Montrer les noms complets des fichiers dans l'explorateur (pas d'ellipses)
         type: class-toggle
         default: false
     -
         id: border_style
         title: Border style
+        title.fr: Bordures
         type: class-select
         allowEmpty: false
         default: border-visible
@@ -746,6 +749,7 @@ settings:
     -
         id: color-scheme
         title: Additional color themes
+        title.fr: Palettes de couleurs
         type: class-select
         allowEmpty: false
         default: ct-jotter        
@@ -771,19 +775,24 @@ settings:
 	-
         id: accent-colors
         title: Accent Colors
+        title.fr: Couleurs d'accentuation
         type: heading
         level: 2
         collapsed: true
     - 
         id: predefined-accent-color
         title: Enable predefined accent colors
+        title.fr: Activer les couleurs d'accentuations prédéfinies
         description: Enable to pick your accent color from the following list (when disabled, you'll be able to pick your accent color from the Appearance tab, as usual)
+        description.fr: Activer pour pouvoir choisir sa couleur d'accentuation depuis la liste ci-dessous (quand désactivé, vous pourrez choisir votre couleur dans la section Apparence, comme d'habitude)
         type: class-toggle
         default: true
     - 
         id: predefined-accent-colors
         title: Accent colors
+        title.fr: Couleurs prédéfinies
         description: Handpicked accent colors you can choose from
+        description.fr: Une liste de couleurs que vous pouvez utiliser pour vos accentuations
         type: class-select
         allowEmpty: false
         default: accent-ultramarine
@@ -827,63 +836,76 @@ settings:
     -
         id: heading
         title: Headings
+        title.fr: Titres
         type: heading
         level: 2
         collapsed: true
     -
         id: styling-headings
         title: Styling
+        title.fr: Style
         type: heading
         level: 3
     -
         title: H2 underline
+        title.fr: Soulignement des H2
         id: h2-underline
         description: Toggle H2 underline
+        description.fr: Activer ou désactiver le soulignement
         type: class-toggle
         default: false
     -
         title: H3 italics
+        title.fr: Italique des H3
         id: h3-italics
         description: Toggle H3 italics
+        description.fr: Activer ou désactiver l'italique
         type: class-toggle
         default: true
     -
         id: colors-headings
         title: Colors
+        title.fr: Couleurs
         type: heading
         level: 3
     -
         title: H1 color
+        title.fr: Couleur H1
         id: h1-color
         type: variable-color
         format: hex
         default: '#'
     -
         title: H2 color
+        title.fr: Couleur H2
         id: h2-color
         type: variable-color
         format: hex
         default: '#'
     -
         title: H3 color
+        title.fr: Couleur H3
         id: h3-color
         type: variable-color
         format: hex
         default: '#'
     -
         title: H4 color
+        title.fr: Couleur H4
         id: h4-color
         type: variable-color
         format: hex
         default: '#'
     -
         title: H5 color
+        title.fr: Couleur H5
         id: h5-color
         type: variable-color
         format: hex
         default: '#'
     -
         title: H6 color
+        title.fr: Couleur H6
         id: h6-color
         type: variable-color
         format: hex
@@ -891,54 +913,67 @@ settings:
     -
         id: typography
         title: Typography
+        title.fr: Typographie
         type: heading
         level: 2
         collapsed: true
     -
         id: bold-text-typography
         title: Bold text
+        title.fr: Texte en gras
         type: heading
         level: 3
     -
         id: strong-color
         title: Bold font color
+        title.fr: Couleur texte gras
         type: variable-color
         format: hex
         default: '#' 
     -
         id: bold-underline
         title: Bold underline
+        title.fr: Soulignement texte gras
         description: Toggle bold underline
+        description.fr: Activer ou désactiver le soulignement des texte en gras
         type: class-toggle
         default: true
     -
         id: bold-underline-color
         title: Bold underline color
+        title.fr: Couleur du soulignement
         description: Change bold underline color (dy default, it is set to be the same as your accent color)
+        description.fr: Changer la couleur du soulignement (par défaut, la couleur sera la même que celle de la couleur d'accentuation)
         type: variable-color
         format: hex
         default: 'var(--text-accent)' 
     -
         id: italic-text-typography
         title: Italic text
+        title.fr: Texte en italique
         type: heading
         level: 3
     -
         id: em-color
         title: Italics color
+        title.fr: Couleur des italiques
         type: variable-color
         format: hex
         default: '#' 
     -
         id: em-underline
         title: Italics underline
+        title.fr: Soulignement des italiques
         description: Toggle italics underline
+        description.fr: Activer ou désactiver le soulignement des textes en italiques
         type: class-toggle
         default: true
     -
         id: italic-underline-color
         title: Italics underline color
+        title.fr: Couleur du soulignement
         description: Change italics underline color
+        description.fr: Changer la couleur du soulignement
         type: variable-color
         format: hex
         default: 'var(--yellow)' 

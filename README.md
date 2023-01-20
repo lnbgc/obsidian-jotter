@@ -136,3 +136,7 @@ Improvements:
 - Default bold underline color is now set to the accent color
 - Kanban checkboxes
 - Code refractor
+
+#### v.2.1.0
+
+French translation added to Style Settings.
