@@ -34,7 +34,7 @@
 
 Meaning, you can customize your theme without having to get into the code part.
 
-- 6 color themes to choose from
+- 5 color themes to choose from
 - 12 predefined accent colors and the ability to disable those predefined colors to choose your own
 - Borderless interface
 - Wrap file and folder titles in the explorer
@@ -140,3 +140,8 @@ Improvements:
 #### v.2.1.0
 
 French translation added to Style Settings.
+
+#### v.2.1.1
+
+Obsidian default color theme removed temporarily.
+Fixed default color theme when Jotter is loaded without Style Settings.

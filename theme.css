@@ -48,33 +48,12 @@ body {
 }
 
 /* Defaults ------------------------------------------------------------ */
-.theme-dark {
+.theme-dark, .theme-light {
     --background-secondary-alt: var(--background-secondary);
     --text-selection: rgb(var(--text-rgb), .1);
 }
 
-.theme-light {
-    --background-secondary-alt: var(--background-secondary);
-    --text-selection: rgb(var(--text-rgb), .1);
-}
-
-/* Obsidian theme ------------------------------------------------------------ */
-.theme-dark.ct-obsidian {
-    --background-secondary-alt: var(--background-secondary);
-    --interactive-normal: var(--interactive-normal);
-}
-
-.theme-light.ct-obsidian {
-    --background-secondary-alt: var(--background-secondary);
-    --interactive-normal: var(--interactive-normal);
-}
-
-.ct-obsidian .day.svelte-q3wqg9:hover {
-    background-color: var(--color-base-30);
-}
-
-/* Jotter theme ------------------------------------------------------------ */
-.theme-dark.ct-jotter {
+.theme-dark, .theme-dark.ct-jotter {
     --background-primary: #121624;
     --background-primary-alt: #1a1f32;
     --background-secondary: #121624;
@@ -99,7 +78,7 @@ body {
     --text-faint: #454b64;
 }
 
-.theme-light.ct-jotter {
+.theme-light, .theme-light.ct-jotter {
     --background-primary: #f0f4fe;
     --background-primary-alt: #e2e6f5;
     --background-secondary: #f1f4fe;
@@ -769,9 +748,6 @@ settings:
             -
                 label: Undercover
                 value: ct-undercover
-            -     
-                label: Obsidian default
-                value: ct-obsidian
 	-
         id: accent-colors
         title: Accent Colors
