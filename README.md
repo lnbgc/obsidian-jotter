@@ -117,12 +117,12 @@ Go check out everyone’s work and support them!
 
 ## Changelog
 
-#### v.1.1.0
+#### v.0.2.0
 
 Added the `Interface` menu in Style Settings.
 New option to pick between bordered and borderless styles on the interface.
 
-#### v.2.0.0
+#### v.1.0.0
 
 Big update for Jotter!
 
@@ -137,11 +137,11 @@ Improvements:
 - Kanban checkboxes
 - Code refractor
 
-#### v.2.1.0
+#### v.1.1.0
 
 French translation added to Style Settings.
 
-#### v.2.1.1
+#### v.1.2.1
 
 Obsidian default color theme removed temporarily.
 Fixed default color theme when Jotter is loaded without Style Settings.
