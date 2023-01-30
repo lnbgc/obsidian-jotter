@@ -2,7 +2,6 @@
 /* Jotter */
 /* Obsidian Theme */
 /* Created by @lnbgc - (https://github.com/lnbgc/obsidian-jotter/) */
-/* v2.1.0 */
 /* __________________________________________________ */
 
 /* 
@@ -13,7 +12,6 @@ FUSION - @zamsyt - https://github.com/zamsyt/obsidian-fusion
 SANCTUM - @jdanielmourao - https://github.com/jdanielmourao/obsidian-sanctum
 YIN AND YANG - @chetachiezikeuzor - https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme
 GOLDEN TOPAZ - @shaggyfeng - https://github.com/shaggyfeng/obsidian-Golden-Topaz-theme
-
 */
 
 body {
@@ -48,12 +46,14 @@ body {
 }
 
 /* Defaults ------------------------------------------------------------ */
-.theme-dark, .theme-light {
+.theme-dark,
+.theme-light {
     --background-secondary-alt: var(--background-secondary);
     --text-selection: rgb(var(--text-rgb), .1);
 }
 
-.theme-dark, .theme-dark.ct-jotter {
+.theme-dark,
+.theme-dark.ct-jotter {
     --background-primary: #121624;
     --background-primary-alt: #1a1f32;
     --background-secondary: #121624;
@@ -78,7 +78,8 @@ body {
     --text-faint: #454b64;
 }
 
-.theme-light, .theme-light.ct-jotter {
+.theme-light,
+.theme-light.ct-jotter {
     --background-primary: #f0f4fe;
     --background-primary-alt: #e2e6f5;
     --background-secondary: #f1f4fe;
@@ -107,6 +108,8 @@ body {
     --background-primary: #252423;
     --background-primary-alt: #302e2c;
     --background-secondary: #21201f;
+
+    --nav-item-background-active: var(--interactive-normal);
 
     --background-modifier-border: hsla(37, 10%, 20%);
     --background-modifier-border-hover: hsla(37, 10%, 25%);
@@ -204,6 +207,8 @@ body {
     --background-primary: #2e3440;
     --background-primary-alt: #3B4252;
     --background-secondary: #2e3440;
+
+    --nav-item-background-active: var(--interactive-normal);
 
     --background-modifier-hover: var(--background-primary-alt);
 
@@ -303,6 +308,8 @@ body {
     --background-primary: #08090D;
     --background-primary-alt: #171c23;
     --background-secondary: #090C10;
+    
+    --nav-item-background-active: var(--interactive-normal);
 
     --background-modifier-hover: rgb(31, 37, 47);
 
@@ -329,20 +336,21 @@ body {
     --background-secondary: #EFF1F5;
 
     --code-background: #eaf0f8;
-
+    
+    
     --background-modifier-hover: var(--background-primary-alt);
-
+    
     --background-modifier-border: hsl(218, 11%, 86%);
     --background-modifier-border-hover: hsl(218, 11%, 81%);
-
+    
     --indentation-guide-color: var(--background-modifier-border);
     --indentation-guide-color-active: hsl(218, 11%, 66%);
-
+    
     --interactive-normal: var(--background-secondary);
     --interactive-hover: var(--background-primary-alt);
-
+    
     --background-modifier-form-field: var(--background-primary);
-
+    
     --text-rgb: 33, 40, 52;
     --text-normal: #212834;
     --text-muted: #7787A9;
@@ -380,6 +388,11 @@ body {
 
 .wrap-titles {
     --nav-item-white-space: wrap;
+}
+
+.active-line-highlight .cm-active.cm-line {
+    background-color: rgb(var(--accent), .1);
+    border-radius: 3px;
 }
 
 /* Header ------------------------------------------------------------ */
@@ -507,52 +520,59 @@ body .view-header-title-container>*,
     --slate: 131, 142, 154;
 }
 
+.predefined-accent-color.colorful-tooltips.accent-mustard,
+.predefined-accent-color.colorful-tooltips.accent-turquoise,
+.predefined-accent-color.colorful-tooltips.accent-bubblegum,
+.predefined-accent-color.colorful-tooltips.accent-pumpkin  {
+    --text-on-accent: black;
+}
+
 .predefined-accent-color.accent-pumpkin {
-    --accent: var(--pumpkin)
+    --accent: var(--pumpkin);
 }
 
 .predefined-accent-color.accent-mustard {
-    --accent: var(--mustard)
+    --accent: var(--mustard);
 }
 
 .predefined-accent-color.accent-bubblegum {
-    --accent: var(--bubblegum)
+    --accent: var(--bubblegum);
 }
 
 .predefined-accent-color.accent-wine {
-    --accent: var(--wine)
+    --accent: var(--wine);
 }
 
 .predefined-accent-color.accent-mauve {
-    --accent: var(--mauve)
+    --accent: var(--mauve);
 }
 
 .predefined-accent-color.accent-brick {
-    --accent: var(--brick)
+    --accent: var(--brick);
 }
 
 .predefined-accent-color.accent-jade {
-    --accent: var(--jade)
+    --accent: var(--jade);
 }
 
 .predefined-accent-color.accent-forest {
-    --accent: var(--forest)
+    --accent: var(--forest);
 }
 
 .predefined-accent-color.accent-denim {
-    --accent: var(--denim)
+    --accent: var(--denim);
 }
 
 .predefined-accent-color.accent-turquoise {
-    --accent: var(--turquoise)
+    --accent: var(--turquoise);
 }
 
 .predefined-accent-color.accent-ultramarine {
-    --accent: var(--ultramarine)
+    --accent: var(--ultramarine);
 }
 
 .predefined-accent-color.accent-slate {
-    --accent: var(--slate)
+    --accent: var(--slate);
 }
 
 .predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
@@ -693,6 +713,34 @@ body.h3-italics .HyperMD-header.HyperMD-header-3 {
     font-style: italic;
 }
 
+/* Tooltips ------------------------------------------------------- */
+.colorful-tooltips .tooltip {
+    background-color: var(--color-accent);
+}
+
+.tooltip .tooltip-arrow {
+    border-bottom: 6px solid transparent;
+}
+
+.tooltip.mod-right .tooltip-arrow {
+    border-right: 6px solid transparent;
+}
+
+.tooltip.mod-left .tooltip-arrow {
+    border-left: 6px solid transparent;
+}
+
+.tooltip.mod-top .tooltip-arrow {
+    border-top: 6px solid transparent;
+}
+
+.predefined-accent-color.colorful-tooltips.accent-turquoise .tooltip,
+.predefined-accent-color.colorful-tooltips.accent-mustard .tooltip,
+.predefined-accent-color.colorful-tooltips.accent-bubblegum .tooltip,
+.predefined-accent-color.colorful-tooltips.accent-pumpkin .tooltip {
+    color: black;
+}
+
 /* @settings
 name: Jotter
 id: jotter
@@ -709,6 +757,20 @@ settings:
         title.fr: Explorateur de fichiers
         description: Show the full name of files in the explorer (no ellipsis)
         description.fr: Montrer les noms complets des fichiers dans l'explorateur (pas d'ellipses)
+        type: class-toggle
+        default: false
+    - 
+        id: colorful-tooltips
+        title: Colorful tooltips
+        title.fr: Infobulles colorées
+        description: When enabled, tooltips will have the same background color as your accent color
+        description.fr: Activer pour que les infobulles soient de la même couleur que la couleur d'accentuation
+        type: class-toggle
+        default: true
+    - 
+        id: active-line-highlight
+        title: Active line highlight
+        title.fr: Surligner la ligne active
         type: class-toggle
         default: false
     -
@@ -822,6 +884,7 @@ settings:
         title.fr: Style
         type: heading
         level: 3
+        collapsed: true
     -
         title: H2 underline
         title.fr: Soulignement des H2
@@ -844,6 +907,7 @@ settings:
         title.fr: Couleurs
         type: heading
         level: 3
+        collapsed: true
     -
         title: H1 color
         title.fr: Couleur H1
@@ -886,6 +950,55 @@ settings:
         type: variable-color
         format: hex
         default: '#'
+    -
+        id: sizes-headings
+        title: Size
+        title.fr: Taille
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: H1 size
+        title.fr: Taille H1
+        id: h1-size
+        type: variable-number
+        default: 1.8
+        format: em
+    -
+        title: H2 size
+        title.fr: Taille H2
+        id: h2-size
+        type: variable-number
+        default: 1.6
+        format: em
+    -
+        title: H3 size
+        title.fr: Taille H3
+        id: h3-size
+        type: variable-number
+        default: 1.4
+        format: em
+    -
+        title: H4 size
+        title.fr: Taille H4
+        id: h4-size
+        type: variable-number
+        default: 1.2
+        format: em
+    -
+        title: H5 size
+        title.fr: Taille H5
+        id: h5-size
+        type: variable-number
+        default: 1
+        format: em
+    -
+        title: H6 size
+        title.fr: Taille H6
+        id: h6-size
+        type: variable-number
+        default: 1
+        format: em
     -
         id: typography
         title: Typography
