@@ -145,3 +145,14 @@ French translation added to Style Settings.
 
 Obsidian default color theme removed temporarily.
 Fixed default color theme when Jotter is loaded without Style Settings.
+
+#### v.1.23.0
+
+Additions to the Style Settings plugin:
+- Colorful tooltips
+- Adjust headings sizes
+- Active line hightlight
+
+Improvements:
+- Fix text on accent for predefined "Bubblegum", "Turquoise", "Mustard", and "Pumpkin" colors
+- Fix active navigation item color on dark color themes (used to pick the same background color as the "Jotter" color theme)
