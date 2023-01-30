@@ -151,7 +151,7 @@ Fixed default color theme when Jotter is loaded without Style Settings.
 Additions to the Style Settings plugin:
 - Colorful tooltips
 - Adjust headings sizes
-- Active line hightlight
+- Active line highlight
 
 Improvements:
 - Fix text on accent for predefined "Bubblegum", "Turquoise", "Mustard", and "Pumpkin" colors
