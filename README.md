@@ -189,3 +189,7 @@ Improvements:
 - Adjustments on rgb colors (code, canvas, callouts) on certain color themes
 - PDF export 
 	- Fixed light colored text exports when in dark mode
+
+#### v. 1.3.1
+
+Patch on inline code pdf exports.
