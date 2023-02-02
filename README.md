@@ -1,5 +1,7 @@
 ## Installation
 
+![Jotter Thumbnail](./assets/thumbnail-big.jpg)
+
 ### Obsidian
 
 1. Open the **Settings** window in Obsidian
@@ -21,10 +23,6 @@
 
 ## Features
 
-- Modern and distraction-free design
-- Underlined **bold** and *italics* texts
-- Invisible note header (appears when the top of the note is hovered)
-- Rounded highlights
 - Style Settings support
 - Optimization and design adjustments for Canvas core plugin and [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin
 
@@ -34,15 +32,16 @@
 
 Meaning, you can customize your theme without having to get into the code part.
 
-- 5 color themes to choose from
-- 12 predefined accent colors and the ability to disable those predefined colors to choose your own
+- 6 color themes
+- 13 predefined accent colors
 - Borderless interface
 - Wrap file and folder titles in the explorer
+- Hide note title in text editor
 - Change headings colors
-- Toggle heading styles (underlines, italics) for H2s and H3s
+- Toggle heading styles (underlines, italics) for H2s, H3s, H5s and H6s
 - Change bold and italic text colors
 - Change bold and italic underline colors
-- Disable bold and italic texts underlines
+- Toggle bold and italic texts underlines
 
 *Download Style Settings through the Community Plugins page in Obsidian to start customizing Jotter theme!*
 
@@ -50,7 +49,7 @@ I will try to include more customization options in the future, so keep an eye o
 
 ## Color Themes and Accent Colors
 
-Some screenshots to showcase every theme and accent colors.
+Some screenshots to showcase additional color themes and predefined accent colors.
 Pick and match as you please!
 
 ### Jotter
@@ -59,15 +58,15 @@ Pick and match as you please!
 
 ![Jotter Light](./assets/jotter-light-ultramarine.png)
 
-*Dark theme + Pumpkin accent*
+*Dark theme + Rust accent*
 
-![Jotter Dark](./assets/jotter-dark-pumpkin.png)
+![Jotter Dark](./assets/jotter-dark-rust.png)
 
 ### Reporter
 
-*Light theme + Jade accent*
+*Light theme + Pumpkin accent*
 
-![Reporter Light](./assets/reporter-light-jade.png)
+![Reporter Light](./assets/reporter-light-pumpkin.png)
 
 *Dark theme + Mustard accent*
 
@@ -75,23 +74,23 @@ Pick and match as you please!
 
 ### Explorer
 
-*Light theme + Wine accent*
+*Light theme + Denim accent*
 
-![Explorer Light](./assets/explorer-light-wine.png)
+![Explorer Light](./assets/explorer-light-denim.png)
 
-*Dark theme + Turquoise accent*
+*Dark theme + Jade accent*
 
-![Explorer Dark](./assets/explorer-dark-turquoise.png)
+![Explorer Dark](./assets/explorer-dark-jade.png)
 
 ### Keeper
 
-*Light theme + Denim accent*
+*Light theme + Slate accent*
 
-![Keeper Light](./assets/keeper-light-denim.png)
+![Keeper Light](./assets/keeper-light-slate.png)
 
-*Dark theme + Slate accent*
+*Dark theme + Turquoise accent*
 
-![Keeper Dark](./assets/keeper-dark-slate.png)
+![Keeper Dark](./assets/keeper-dark-turquoise.png)
 
 ### Undercover
 
@@ -112,6 +111,7 @@ Inspired by:
 - [Sanctum]( https://github.com/jdanielmourao/obsidian-sanctum) - @jdanielmourao
 - [Yin and Yang](https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme) - @chetachiezikeuzor
 - [Golden Topaz](https://github.com/shaggyfeng/obsidian-Golden-Topaz-theme) - @shaggyfeng
+- [Minimal](https://github.com/kepano/obsidian-minimal) - @kepano
 
 Go check out everyone’s work and support them!
 
@@ -156,3 +156,36 @@ Additions to the Style Settings plugin:
 Improvements:
 - Fix text on accent for predefined "Bubblegum", "Turquoise", "Mustard", and "Pumpkin" colors
 - Fix active navigation item color on dark color themes (used to pick the same background color as the "Jotter" color theme)
+
+#### v. 1.3.0
+
+*Style Settings plugin:*
+
+- New "Editor" section where the active line highlight option has been moved
+	- Added the "Hide note title" option, to hide the note title in the text editor
+- "Brick" accent color has been renamed to "Vermilion"
+- New "Rust" accent color
+- New style on H5s and H6s (uppercase) + option to disable said styling
+- Obsidian default color theme has been re-added
+
+*General improvements:*
+
+- Interface
+	- File Explorer
+		- Lighter file names / Darker folder names
+		- Spacing between files
+		- Uppercase, smaller vault name
+		- Padding adjustments
+	- Side dock
+	- Header
+		-  Re-added file name to the note header, which now is the only hover-able element of the header 
+	- Removed unnecessary padding from hidden vault name (with [Hider](https://github.com/kepano/obsidian-hider) plugin)
+	- Changed headings default sizes (smaller)
+- Calendar 
+	- Added padding and bottom border on days of the week
+- Small color adjustments on additional color themes
+- Adjustments on predefined color accents 
+	- Added hsl values to avoid default accent color to pick through when dragging files or on text selection
+- Adjustments on rgb colors (code, canvas, callouts) on certain color themes
+- PDF export 
+	- Fixed light colored text exports when in dark mode

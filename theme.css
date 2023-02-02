@@ -12,28 +12,31 @@ FUSION - @zamsyt - https://github.com/zamsyt/obsidian-fusion
 SANCTUM - @jdanielmourao - https://github.com/jdanielmourao/obsidian-sanctum
 YIN AND YANG - @chetachiezikeuzor - https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme
 GOLDEN TOPAZ - @shaggyfeng - https://github.com/shaggyfeng/obsidian-Golden-Topaz-theme
+MINIMAL - @kepano - https://github.com/kepano/obsidian-minimal
 */
 
 body {
-    --h1-size: 1.8em;
-    --h2-size: 1.6em;
-    --h3-size: 1.4em;
-    --h4-size: 1.2em;
-    --h5-size: 1em;
-    --h6-size: 1em;
+    --h1-size: 1.3em;
+    --h2-size: 1.2em;
+    --h3-size: 1.1em;
+    --h4-size: 1em;
+    --h5-size: .85em;
+    --h6-size: .75em;
 
-    --h1-color: rgb(var(--text-rgb));
+    --h1-color: var(--text-normal);
     --h2-color: var(--text-accent);
-    --h3-color: rgb(var(--text-rgb));
-    --h4-color: rgb(var(--text-rgb), .7);
-    --h5-color: rgb(var(--text-rgb), .5);
-    --h6-color: rgb(var(--text-rgb), .3);
+    --h3-color: var(--text-normal);
+    --h4-color: var(--text-muted);
+    --h5-color: var(--text-muted);
+    --h6-color: var(--text-faint);
 
     --icon-color: var(--text-faint);
     --icon-color-hover: var(--text-muted);
-    --icon-color-focused: rgb(var(--text-rgb));
+    --icon-color-focused: var(--text-muted);
 
-    --yellow: #f5d3a1;
+    --indentation-guide-width: 1.5px;
+
+    --yellow: #fcd86c;
 
     --strong-color: var(--text-normal);
     --em-color: var(--text-normal);
@@ -41,218 +44,141 @@ body {
     --bold-underline-color: var(--text-accent);
     --italic-underline-color: var(--yellow);
 
-    --background-modifier-border-focus: var(--background-modifier-border);
-    --background-modifier-active-hover: rgb(var(--accent), .25);
+    --modal-border-width: 2px;
+    --modal-border-color: var(--background-modifier-border);
 }
 
-/* Defaults ------------------------------------------------------------ */
 .theme-dark,
 .theme-light {
     --background-secondary-alt: var(--background-secondary);
-    --text-selection: rgb(var(--text-rgb), .1);
-}
-
-.theme-dark,
-.theme-dark.ct-jotter {
-    --background-primary: #121624;
-    --background-primary-alt: #1a1f32;
-    --background-secondary: #121624;
-
-    --nav-item-background-active: hsl(228, 31%, 19%);
-    --background-modifier-hover: var(--nav-item-background-active);
-
-    --background-modifier-border: hsla(227, 32%, 20%);
-    --background-modifier-border-hover: hsla(227, 32%, 25%);
-
     --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsla(227, 20%, 50%);
-
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 195, 205, 250;
-    --text-normal: #c3cdfa;
-    --text-muted: #7a81a0;
-    --text-faint: #454b64;
-}
-
-.theme-light,
-.theme-light.ct-jotter {
-    --background-primary: #f0f4fe;
-    --background-primary-alt: #e2e6f5;
-    --background-secondary: #f1f4fe;
-
     --background-modifier-hover: var(--background-primary-alt);
-
-    --background-modifier-border: hsla(227, 32%, 90%);
-    --background-modifier-border-hover: hsla(227, 32%, 87%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsla(227, 20%, 70%);
-
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-
     --background-modifier-form-field: var(--background-primary);
+    --background-modifier-border-focus: var(--background-modifier-border);
 
-    --text-rgb: 32, 38, 51;
-    --text-normal: #202633;
-    --text-muted: #7f859e;
-    --text-faint: #b1b8d3;
+    --input-shadow: none;
+    --input-shadow-hover: none;
+    --shadow-s: none;
+    --shadow-l: none;
 }
 
-/* Reporter theme ------------------------------------------------------------ */
+/* THEMES */
+/* Default theme */
+.theme-light {
+    --background-primary: #f2f2f2;
+    --background-primary-alt: #e6e6e6;
+    --background-secondary: #f2f2f2;
+
+    --background-modifier-border: hsl(0, 0%, 84%);
+    --background-modifier-border-hover: hsl(0, 0%, 84%);
+
+    --indentation-guide-color-active: hsl(0, 0%, 70%);
+
+    --interactive-normal: #e6e6e6;
+    --interactive-hover: #efefef;
+
+    --text-normal: #353132;
+    --text-muted: #878586;
+    --text-faint: #ababab;
+}
+
+.theme-dark {
+    --background-primary: #322f30;
+    --background-primary-alt: #413e3e;
+    --background-secondary: #322f30;
+
+    --background-modifier-border: hsl(345, 3%, 28%);
+    --background-modifier-border-hover: hsl(345, 3%, 30%);
+
+    --indentation-guide-color-active: hsl(345, 3%, 45%);
+
+    --interactive-normal: #433F40;
+    --interactive-hover: #4a4546;
+
+    --text-normal: #e1e1e1;
+    --text-muted: #b7b2b2;
+    --text-faint: #807b7b;
+}
+
+/* Reporter theme */
+.theme-light.ct-reporter {
+    --background-primary: #fffdf8;
+    --background-primary-alt: #ebe4d6;
+    --background-secondary: #f5f0e5;
+
+    --code-background: #f3ede2;
+
+    --background-modifier-border: hsl(41, 18%, 82%);
+    --background-modifier-border-hover: hsl(41, 20%, 88%);
+
+    --indentation-guide-color-active: hsl(41, 5%, 65%);
+
+    --interactive-normal: var(--background-primary-alt);
+    --interactive-hover: #f2ede4;
+
+    --text-normal: #353132;
+    --text-muted: #7d7c7d;
+    --text-faint: #a7a7a7;
+}
+
 .theme-dark.ct-reporter {
     --background-primary: #252423;
     --background-primary-alt: #302e2c;
     --background-secondary: #21201f;
 
-    --nav-item-background-active: var(--interactive-normal);
+    --background-modifier-border: hsla(37, 5%, 20%);
+    --background-modifier-border-hover: hsla(37, 5%, 25%);
 
-    --background-modifier-border: hsla(37, 10%, 20%);
-    --background-modifier-border-hover: hsla(37, 10%, 25%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(37, 10%, 40%);
+    --indentation-guide-color-active: hsl(37, 5%, 35%);
 
     --interactive-normal: var(--background-modifier-border);
     --interactive-hover: var(--background-modifier-border-hover);
 
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 215, 205, 193;
     --text-normal: #d7cdc1;
     --text-muted: #938d89;
-    --text-faint: #575351;
+    --text-faint: #65615f;
 }
 
-.theme-light.ct-reporter {
-    --background-primary: #fdf8ef;
-    --background-primary-alt: #eae0d3;
-    --background-secondary: #f9f2e7;
-
-    --code-background: #f3ece3;
-
-    --background-modifier-border: hsla(37, 28%, 85%);
-    --background-modifier-border-hover: hsla(37, 28%, 90%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(37, 10%, 55%);
-
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 46, 44, 42;
-    --text-normal: #2e2c2a;
-    --text-muted: #908782;
-    --text-faint: #b9b2ad;
-}
-
-/* Explorer theme ------------------------------------------------------------ */
-.theme-dark.ct-explorer {
-    --background-primary: #161616;
-    --background-primary-alt: #333232;
-    --background-secondary: #161616;
-
-    --nav-item-background-active: var(--code-background);
-    --code-background: #282727;
-
-    --background-modifier-border: hsl(30, 1%, 23%);
-    --background-modifier-border-hover: hsl(30, 1%, 33%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(30, 1%, 43%);
-
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 240, 240, 240;
-    --text-normal: #f4f4f0;
-    --text-muted: #a6a4a1;
-    --text-faint: #555453;
-}
-
+/* Explorer theme */
 .theme-light.ct-explorer {
     --background-primary: #e7e5d0;
     --background-primary-alt: #dad7c3;
     --background-secondary: #e7e5d0;
 
-    --code-background: #dedac5;
+    --code-background: #dedbc9;
 
     --background-modifier-border: hsl(55, 20%, 75%);
-    --background-modifier-border-hover: hsl(55, 20%, 70%);
+    --background-modifier-border-hover: hsl(55, 20%, 80%);
 
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(55, 20%, 50%);
-
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 0, 0, 0;
-    --text-normal: rgb(0, 0, 0);
-    --text-muted: rgb(76, 80, 100);
-    --text-faint: rgb(135, 140, 161);
-}
-
-/* Keeper theme ------------------------------------------------------------ */
-.theme-dark.ct-keeper {
-    --background-primary: #2e3440;
-    --background-primary-alt: #3B4252;
-    --background-secondary: #2e3440;
-
-    --nav-item-background-active: var(--interactive-normal);
-
-    --background-modifier-hover: var(--background-primary-alt);
-
-    --background-modifier-border: hsl(222, 16%, 28%);
-    --background-modifier-border-hover: hsl(222, 16%, 33%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(220, 17%, 48%);
+    --indentation-guide-color-active: hsl(30, 1%, 63%);
 
     --interactive-normal: var(--background-modifier-border);
     --interactive-hover: var(--background-modifier-border-hover);
 
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 236, 239, 244;
-    --text-normal: #eceff4;
-    --text-muted: #969ba4;
-    --text-faint: #656971;
-
-    --color-red: #bf616a;
-    --color-red-rgb: 191, 97, 106;
-
-    --color-green: #8fbcbb;
-    --color-green-rgb: 143, 188, 187;
-
-    --color-orange: #d08770;
-    --color-orange-rgb: 208, 135, 112;
-
-    --color-yellow: #ebc88b;
-    --color-yellow-rgb: 235, 200, 139;
-
-    --color-cyan: #88c0d0;
-    --color-cyan-rgb: 136, 192, 208;
-
-    --color-blue: #81a1c1;
-    --color-blue-rgb: 129, 161, 193;
-
-    --color-purple: #8b81c1;
-    --color-purple-rgb: 139, 129, 193;
-
-    --color-pink: #bd81c1;
-    --color-pink-rgb: 189, 129, 193;
+    --text-normal: #191919;
+    --text-muted: #555864;
+    --text-faint: #999ba4;
 }
 
+.theme-dark.ct-explorer {
+    --background-primary: #161616;
+    --background-primary-alt: #242323;
+    --background-secondary: #161616;
+
+    --background-modifier-border: hsl(30, 1%, 23%);
+    --background-modifier-border-hover: hsl(30, 1%, 28%);
+
+    --indentation-guide-color-active: hsl(30, 1%, 43%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+
+    --text-normal: #f4f4f0;
+    --text-muted: #a6a4a1;
+    --text-faint: #555453;
+}
+
+/* Keeper theme */
 .theme-light.ct-keeper {
     --background-primary: #d8dee9;
     --background-primary-alt: #c5cdda;
@@ -260,74 +186,35 @@ body {
 
     --code-background: #d0d8e4;
 
-    --background-modifier-hover: var(--background-primary-alt);
+    --background-modifier-border: hsl(222, 20%, 80%);
+    --background-modifier-border-hover: hsl(222, 20%, 83%);
 
-    --background-modifier-border: hsl(230, 14%, 75%);
-    --background-modifier-border-hover: hsl(230, 14%, 80%);
-
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(220, 17%, 48%);
+    --indentation-guide-color-active: hsl(220, 17%, 70%);
 
     --interactive-normal: var(--background-modifier-border);
     --interactive-hover: var(--background-modifier-border-hover);
 
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 46, 52, 64;
     --text-normal: #2e3440;
-    --text-muted: #627089;
-    --text-faint: #95a6c7;
-
-    --color-red: #bf616a;
-    --color-red-rgb: 191, 97, 106;
-
-    --color-green: #8fbcbb;
-    --color-green-rgb: 143, 188, 187;
-
-    --color-orange: #d08770;
-    --color-orange-rgb: 208, 135, 112;
-
-    --color-yellow: #ebc88b;
-    --color-yellow-rgb: 235, 200, 139;
-
-    --color-cyan: #88c0d0;
-    --color-cyan-rgb: 136, 192, 208;
-
-    --color-blue: #81a1c1;
-    --color-blue-rgb: 129, 161, 193;
-
-    --color-purple: #8b81c1;
-    --color-purple-rgb: 139, 129, 193;
-
-    --color-pink: #bd81c1;
-    --color-pink-rgb: 189, 129, 193;
+    --text-muted: #6b7b97;
+    --text-faint: #8b9ab9;
 }
 
-/* Undercover theme ------------------------------------------------------------ */
-.theme-dark.ct-undercover {
-    --background-primary: #08090D;
-    --background-primary-alt: #171c23;
-    --background-secondary: #090C10;
-    
-    --nav-item-background-active: var(--interactive-normal);
+.theme-dark.ct-keeper {
+    --background-primary: #2e3440;
+    --background-primary-alt: #3B4252;
+    --background-secondary: #2e3440;
 
-    --background-modifier-hover: rgb(31, 37, 47);
+    --background-modifier-border: hsl(222, 16%, 28%);
+    --background-modifier-border-hover: hsl(222, 16%, 33%);
 
-    --background-modifier-border: hsl(219, 20%, 27%);
-    --background-modifier-border-hover: hsl(219, 20%, 37%);
+    --indentation-guide-color-active: hsl(220, 17%, 40%);
 
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(221, 16%, 47%);
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
 
-    --interactive-normal: #1d232c;
-    --interactive-hover: #242c36;
-
-    --background-modifier-form-field: var(--background-primary);
-
-    --text-rgb: 239, 240, 242;
-    --text-normal: rgb(239, 240, 242);
-    --text-muted: rgb(123, 135, 160);
-    --text-faint: rgb(75, 88, 112);
+    --text-normal: #eceff4;
+    --text-muted: #a3aab9;
+    --text-faint: #7a8191;
 }
 
 .theme-light.ct-undercover {
@@ -336,121 +223,241 @@ body {
     --background-secondary: #EFF1F5;
 
     --code-background: #eaf0f8;
-    
-    
-    --background-modifier-hover: var(--background-primary-alt);
-    
+
     --background-modifier-border: hsl(218, 11%, 86%);
     --background-modifier-border-hover: hsl(218, 11%, 81%);
-    
-    --indentation-guide-color: var(--background-modifier-border);
-    --indentation-guide-color-active: hsl(218, 11%, 66%);
-    
-    --interactive-normal: var(--background-secondary);
-    --interactive-hover: var(--background-primary-alt);
-    
-    --background-modifier-form-field: var(--background-primary);
-    
-    --text-rgb: 33, 40, 52;
+
+    --indentation-guide-color-active: hsl(218, 11%, 70%);
+
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: hsl(218, 11%, 90%);
+
     --text-normal: #212834;
     --text-muted: #7787A9;
     --text-faint: #A1ACC2;
 }
 
-/* Interface ------------------------------------------------------------ */
-.nav-buttons-container {
-    justify-content: flex-start;
+.theme-dark.ct-undercover {
+    --background-primary: #08090D;
+    --background-primary-alt: #171c23;
+    --background-secondary: #090C10;
+
+    --code-background: #131820;
+
+    --background-modifier-border: hsl(219, 20%, 27%);
+    --background-modifier-border-hover: hsl(219, 20%, 37%);
+
+    --indentation-guide-color-active: hsl(221, 16%, 40%);
+
+    --interactive-normal: #1d232c;
+    --interactive-hover: #242c36;
+
+    --text-normal: #eff0f2;
+    --text-muted: #7b87a0;
+    --text-faint: #4b5870;
 }
 
-.nav-action-button[aria-label="New note"]>svg {
-    stroke: var(--text-accent);
+.ct-keeper,
+.ct-reporter,
+.theme-dark.ct-explorer,
+.theme-dark.ct-jotter {
+    --color-red: #bf616a;
+    --color-red-rgb: 191, 97, 106;
+
+    --color-green: #8fbcbb;
+    --color-green-rgb: 143, 188, 187;
+
+    --color-orange: #d08770;
+    --color-orange-rgb: 208, 135, 112;
+
+    --color-yellow: #ebc88b;
+    --color-yellow-rgb: 235, 200, 139;
+
+    --color-cyan: #88c0d0;
+    --color-cyan-rgb: 136, 192, 208;
+
+    --color-blue: #81a1c1;
+    --color-blue-rgb: 129, 161, 193;
+
+    --color-purple: #8b81c1;
+    --color-purple-rgb: 139, 129, 193;
+
+    --color-pink: #bd81c1;
+    --color-pink-rgb: 189, 129, 193;
 }
 
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-    padding-right: 8px;
+.theme-light.ct-obsidian,
+.theme-dark.ct-obsidian {
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
+    --background-secondary: var(--color-base-20);
+
+    --background-modifier-border: var(--color-base-30);
+    --background-modifier-border-hover: var(--color-base-35);
+
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
+
+    --indentation-guide-color: rgba(var(--mono-rgb-100), 0.12);
+    --indentation-guide-color-active: rgba(var(--mono-rgb-100), 0.3);
+
+    --interactive-normal: var(--color-base-00);
+    --interactive-hover: var(--color-base-10);
+
+    --text-normal: var(--color-base-100);
+    --text-muted: var(--color-base-70);
+    --text-faint: var(--color-base-50);
 }
 
-.nav-files-container {
-    padding: 0 var(--size-4-2) var(--size-4-6) var(--size-4-2);
+/* ACCENT COLORS */
+.predefined-accent-color {
+    --text-accent: rgb(var(--accent));
+    --color-accent: rgb(var(--accent));
+    --interactive-accent: rgb(var(--accent));
+    --tag-background: rgb(var(--accent), .2);
+    --tag-background-hover: rgb(var(--accent), .3);
+
+    --text-accent-hover: rgb(var(--accent), 0.8);
+    --interactive-accent-hover: rgb(var(--accent), 0.8);
+
+    --rust: 188, 74, 60;
+    --vermilion: 243, 90, 55;
+    --pumpkin: 246, 141, 69;
+    --mustard: 255, 208, 113;
+    --jade: 0, 168, 107;
+    --forest: 77, 116, 53;
+    --turquoise: 120, 230, 232;
+    --ultramarine: 92, 124, 255;
+    --denim: 76, 80, 120;
+    --mauve: 122, 73, 136;
+    --bubblegum: 255, 179, 189;
+    --wine: 114, 47, 55;
+    --slate: 131, 142, 154;
 }
 
-.workspace-tab-header-inner-close-button[aria-label="Close"]>svg {
-    stroke: var(--text-faint);
+.predefined-accent-color.accent-rust {
+    --accent: var(--rust);
+    --accent-h: 7;
+    --accent-s: 52%;
+    --accent-l: 49%;
 }
 
-.collapse-icon svg.svg-icon {
-    stroke-width: 2px;
+.predefined-accent-color.accent-vermilion {
+    --accent: var(--vermilion);
+    --accent-h: 11;
+    --accent-s: 89%;
+    --accent-l: 58%;
 }
 
-.workspace-ribbon.mod-left.is-collapsed {
-    background-color: var(--background-secondary);
+.predefined-accent-color.accent-pumpkin {
+    --accent: var(--pumpkin);
+    --accent-h: 24;
+    --accent-s: 91%;
+    --accent-l: 62%;
 }
 
-.wrap-titles {
-    --nav-item-white-space: wrap;
+.predefined-accent-color.accent-mustard {
+    --accent: var(--mustard);
+    --accent-h: 40;
+    --accent-s: 100%;
+    --accent-l: 72%;
 }
 
-.active-line-highlight .cm-active.cm-line {
-    background-color: rgb(var(--accent), .1);
-    border-radius: 3px;
+.predefined-accent-color.accent-jade {
+    --accent: var(--jade);
+    --accent-h: 158;
+    --accent-s: 100%;
+    --accent-l: 33%;
 }
 
-/* Header ------------------------------------------------------------ */
-:root:root:root .view-header {
-    background: transparent;
+.predefined-accent-color.accent-forest {
+    --accent: var(--forest);
+    --accent-h: 97;
+    --accent-s: 37%;
+    --accent-l: 33%;
 }
 
-.view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
-    padding-top: 2em;
+.predefined-accent-color.accent-turquoise {
+    --accent: var(--turquoise);
+    --accent-h: 181;
+    --accent-s: 71%;
+    --accent-l: 69%;
 }
 
-.view-header {
-    position: absolute;
-    width: 100%;
+.predefined-accent-color.accent-ultramarine {
+    --accent: var(--ultramarine);
+    --accent-h: 228;
+    --accent-s: 100%;
+    --accent-l: 68%;
 }
 
-body .view-header-title-container>*,
-.view-header-title-container::after {
+.predefined-accent-color.accent-denim {
+    --accent: var(--denim);
+    --accent-h: 235;
+    --accent-s: 22%;
+    --accent-l: 38%;
+}
+
+.predefined-accent-color.accent-mauve {
+    --accent: var(--mauve);
+    --accent-h: 287;
+    --accent-s: 30%;
+    --accent-l: 41%;
+}
+
+.predefined-accent-color.accent-bubblegum {
+    --accent: var(--bubblegum);
+    --accent-h: 352;
+    --accent-s: 100%;
+    --accent-l: 85%;
+}
+
+.predefined-accent-color.accent-wine {
+    --accent: var(--wine);
+    --accent-h: 353;
+    --accent-s: 42%;
+    --accent-l: 32%;
+}
+
+.predefined-accent-color.accent-slate {
+    --accent: var(--slate);
+    --accent-h: 211;
+    --accent-s: 10%;
+    --accent-l: 56%;
+}
+
+/* Text on accent */
+.accent-mustard,
+.accent-turquoise,
+.accent-bubblegum {
+    --text-on-accent: #353132;
+}
+
+.colorful-tooltips.accent-turquoise .tooltip,
+.colorful-tooltips.accent-mustard .tooltip,
+.colorful-tooltips.accent-bubblegum .tooltip,
+.colorful-tooltips.accent-pumpkin .tooltip {
+    color: var(--text-on-accent);
+}
+
+/* Accent color + Style Settings - Message override */
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
+    visibility: hidden;
+    width: 12rem;
+}
+
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control .lucide-rotate-ccw {
     display: none;
 }
 
-:root .view-header .clickable-icon {
-    background-color: var(--background-primary);
-    opacity: .95;
+.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
+    visibility: visible;
+    content: "Open the Style Settings plugin to pick your accent colors.";
+    color: var(--text-error);
+    font-size: var(--font-ui-smaller);
 }
 
-@media (hover: hover) {
-
-    :root:root .workspace-tab-header:not(:hover) .workspace-tab-header-inner-close-button,
-    .workspace-tab-header-container:not(:hover)+* .view-header:not(:hover) .clickable-icon {
-        opacity: 0;
-    }
-
-    body .view-header-title-container:not(:hover)>*:not(:focus) {
-        opacity: 0 !important;
-    }
-}
-
-@media (hover: none) {
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-close-button {
-        opacity: 0;
-    }
-
-    .view-header {
-        pointer-events: none;
-    }
-
-    .view-header .clickable-icon {
-        pointer-events: auto;
-    }
-}
-
-.canvas-controls,
-.kanban-plugin {
-    margin-top: 2em;
-}
-
-/* Borders ------------------------------------------------------------ */
+/* INTERFACE ---------------------*/
+/* Borders */
 .border-invisible {
     --divider-color: transparent;
 }
@@ -468,135 +475,222 @@ body .view-header-title-container>*,
     border-top: none;
 }
 
-/* Calendar ------------------------------------------------------------ */
-.day.has-note>.dot-container>svg {
-    fill: var(--text-accent);
+/* File Explorer */
+.nav-buttons-container {
+    justify-content: flex-start;
+    padding-left: .5em;
+    padding-top: .5em;
 }
 
-.day.has-note.active {
-    background-color: var(--background-modifier-border-hover);
+.nav-files-container {
+    margin-left: .2em;
+    margin-right: .5em;
+}
+
+.nav-file-title .nav-file-tag {
+    order: 1;
+    margin: 0;
+}
+
+.nav-file-title .nav-file-title-content {
+    order: 2;
+}
+
+.nav-file-title {
+    gap: .5em;
+}
+
+.nav-file-title-content {
+    color: var(--text-faint);
+}
+
+.nav-folder-title {
+    color: var(--text-muted);
+}
+
+.nav-file-title.is-active .nav-file-title-content,
+.nav-file-title:hover .nav-file-title-content {
+    color: var(--text-muted)
+}
+
+.nav-folder-collapse-indicator>svg {
+    stroke: var(--text-muted);
+}
+
+.collapse-icon svg.svg-icon {
+    stroke-width: 2px;
+}
+
+.nav-folder-children {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+}
+
+/* File Explorer - Wrap titles */
+.wrap-titles {
+    --nav-item-white-space: wrap;
+}
+
+.wrap-titles .nav-file-title .nav-file-tag {
+    align-self: flex-start;
+    margin-top: .2em;
+}
+
+/* File Explorer - Vault name */
+.nav-folder.mod-root>.nav-folder-title {
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-size: .8em;
+    padding-bottom: 1em;
+    padding-top: .5em;
+}
+
+/* Vault name - Hider */
+.hider-vault .nav-folder.mod-root>.nav-folder-title {
+    padding: 0;
+}
+
+/* Header */
+.view-header-title-container.mod-at-start {
+    opacity: 0;
+    transition: .25s;
+}
+
+.view-header:hover .view-header-title-container.mod-at-start {
+    opacity: 1;
+}
+
+.view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
+    padding-top: .2em;
+}
+
+.view-header-title-parent {
+    color: var(--text-faint);
+}
+
+.view-header-title {
     color: var(--text-normal);
 }
 
-.day.has-note.active:hover {
-    color: var(--background-secondary);
+.workspace-tab-header-inner-close-button[aria-label="Close"]>svg {
+    stroke: var(--text-faint);
 }
 
-.day.has-note.active:hover>.dot-container>svg {
-    fill: var(--background-secondary);
+.workspace-tab-header-inner-close-button[aria-label="Close"]:hover>svg {
+    stroke: var(--text-muted);
 }
 
-.day.has-note.active.today>.dot-container>svg {
-    fill: var(--background-secondary);
+/* Tooltips */
+.tooltip .tooltip-arrow,
+.tooltip.mod-right .tooltip-arrow,
+.tooltip.mod-left .tooltip-arrow,
+.tooltip.mod-top .tooltip-arrow {
+    border-color: transparent;
 }
 
-.day.today {
-    font-weight: 600;
+.colorful-tooltips .tooltip {
+    background-color: var(--color-accent);
 }
 
-/* Accent colors -------------------------------------------------------- */
-.predefined-accent-color {
-    --text-accent: rgb(var(--accent));
-    --color-accent: rgb(var(--accent));
-    --interactive-accent: rgb(var(--accent));
-
-    --tag-background: rgb(var(--accent), .2);
-    --tag-background-hover: rgb(var(--accent), .3);
-
-    --text-accent-hover: rgb(var(--accent), 0.8);
-    --interactive-accent-hover: rgb(var(--accent), 0.8);
-
-    --brick: 243, 90, 55;
-    --pumpkin: 246, 141, 69;
-    --mustard: 255, 208, 113;
-    --jade: 0, 168, 107;
-    --forest: 77, 116, 53;
-    --turquoise: 120, 230, 232;
-    --ultramarine: 92, 124, 255;
-    --denim: 76, 80, 120;
-    --mauve: 122, 73, 136;
-    --bubblegum: 255, 179, 189;
-    --wine: 114, 47, 55;
-    --slate: 131, 142, 154;
+/* Buttons */
+button:not(.clickable-icon) {
+    border: 1.5px solid var(--background-modifier-border);
 }
 
-.predefined-accent-color.colorful-tooltips.accent-mustard,
-.predefined-accent-color.colorful-tooltips.accent-turquoise,
-.predefined-accent-color.colorful-tooltips.accent-bubblegum,
-.predefined-accent-color.colorful-tooltips.accent-pumpkin  {
-    --text-on-accent: black;
+select,
+.dropdown {
+    border: 2px solid var(--background-modifier-border);
 }
 
-.predefined-accent-color.accent-pumpkin {
-    --accent: var(--pumpkin);
+/* Side dock */
+.side-dock-actions {
+    margin-top: .3em;
+    gap: .6em;
 }
 
-.predefined-accent-color.accent-mustard {
-    --accent: var(--mustard);
-}
-
-.predefined-accent-color.accent-bubblegum {
-    --accent: var(--bubblegum);
-}
-
-.predefined-accent-color.accent-wine {
-    --accent: var(--wine);
-}
-
-.predefined-accent-color.accent-mauve {
-    --accent: var(--mauve);
-}
-
-.predefined-accent-color.accent-brick {
-    --accent: var(--brick);
-}
-
-.predefined-accent-color.accent-jade {
-    --accent: var(--jade);
-}
-
-.predefined-accent-color.accent-forest {
-    --accent: var(--forest);
-}
-
-.predefined-accent-color.accent-denim {
-    --accent: var(--denim);
-}
-
-.predefined-accent-color.accent-turquoise {
-    --accent: var(--turquoise);
-}
-
-.predefined-accent-color.accent-ultramarine {
-    --accent: var(--ultramarine);
-}
-
-.predefined-accent-color.accent-slate {
-    --accent: var(--slate);
-}
-
-.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
-    visibility: hidden;
-    width: 12rem;
-}
-
-.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control .lucide-rotate-ccw {
+/* EDITOR --------------- */
+/* Hide note title */
+.hide-note-title .inline-title {
     display: none;
 }
 
-.predefined-accent-color .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
-    visibility: visible;
-    content: "Download the Style Settings plugin to pick your accent colors.";
-    color: var(--text-error);
-    font-size: var(--font-ui-smaller);
+.active-line-highlight .cm-active.cm-line {
+    background-color: rgb(var(--accent), .1);
+    border-radius: 3px;
 }
 
-/* Canvas -------------------------------------------------------- */
-.canvas-card-menu .canvas-card-menu-button.mod-draggable {
-    stroke: var(--accent);
+/* Headings */
+.h2-underline h2,
+.h2-underline .markdown-rendered h2,
+.h2-underline .HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--h2-color);
+    width: 100%;
+    padding-bottom: 2px;
 }
 
-/* Kanban -------------------------------------------------------- */
+.h3-italics h3,
+.h3-italics .markdown-rendered h3,
+.h3-italics .HyperMD-header-3,
+.h3-italics .cm-header-3 {
+    font-style: italic;
+}
+
+.h5-uppercase h5,
+.h5-uppercase .markdown-rendered h5,
+.h5-uppercase .HyperMD-header-5,
+.h5-uppercase .cm-header-5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.h6-uppercase h6,
+.h6-uppercase .markdown-rendered h6,
+.h6-uppercase .HyperMD-header-6,
+.h6-uppercase .cm-header-6 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Checkboxes */
+.markdown-preview-view ul>li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
+    text-decoration: none;
+    color: var(--text-faint);
+}
+
+/* Bold text */
+body strong,
+body span.cm-strong {
+    color: var(--strong-color);
+}
+
+body.bold-underline strong,
+body.bold-underline span.cm-strong {
+    border-bottom: 5.5px solid var(--bold-underline-color);
+}
+
+/* Italic text */
+body em,
+body span.cm-em {
+    color: var(--em-color);
+}
+
+body.em-underline em,
+body.em-underline span.cm-em {
+    border-bottom: 5.5px solid var(--italic-underline-color);
+}
+
+/* Highlight */
+.cm-highlight,
+mark {
+    border-radius: 5px;
+    padding: .1em .4em;
+}
+
+/* KANBAN */
+/* Kanban - Checkboxes */
 .kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
     filter: none;
 }
@@ -609,10 +703,11 @@ body .view-header-title-container>*,
     -webkit-mask-position: 30% 40%;
 }
 
+/* Kanban - Board */
 .kanban-plugin {
     --dot-color: hsl(0 0% 40% / 25%);
-    --dot-spacing: 9px;
-    --dot-size: 1px;
+    --dot-spacing: 15px;
+    --dot-size: .8px;
 }
 
 .kanban-plugin__board {
@@ -624,121 +719,102 @@ body .view-header-title-container>*,
     background-attachment: local;
 }
 
+/* Kanban - Lists */
 .kanban-plugin__item {
     border: 1.5px solid var(--background-modifier-border);
 }
 
 .kanban-plugin__lane-items>div {
-    margin-top: .5rem;
+    margin-top: .6em;
 }
 
 .kanban-plugin__item-button-wrapper button:not(.clickable-icon) {
     box-shadow: none;
-    border: 1.5px solid rgb(var(--text-rgb), .1);
+    border: 1.5px solid var(--background-modifier-border);
 }
 
+.kanban-plugin__item-button-wrapper button:not(.clickable-icon):hover {
+    border: 1.5px solid var(--accent);
+}
+
+/* Kanban - Add list section */
 .kanban-plugin__lane-input-actions>button {
     color: var(--text-normal);
-    background-color: var(--background-primary);
+    background-color: var(--interactive-normal);
 }
 
 .kanban-plugin__lane-input-actions .kanban-plugin__lane-action-add:hover {
-    color: var(--background-primary);
+    color: var(--text-on-accent);
 }
 
 .kanban-plugin__lane-input-actions .kanban-plugin__lane-action-cancel:hover {
-    background-color: var(--background-modifier-border);
+    background-color: var(--interactive-hover);
 }
 
-.theme-dark .kanban-plugin__lane {
-    background-color: var(--background-primary);
+/* CALENDAR */
+.calendar thead {
+    border-bottom: 2px solid var(--background-modifier-border);
 }
 
-.theme-dark .kanban-plugin__item-title-wrapper {
-    background-color: var(--background-primary-alt);
+.calendar thead>tr>th {
+    padding-bottom: 1.5em;
 }
 
-.theme-light .kanban-plugin__lane {
-    background-color: var(--background-primary-alt);
+.calendar tbody>tr:first-child>td {
+    padding-top: .8em;
 }
 
-.theme-light .kanban-plugin__item-title-wrapper {
-    background-color: var(--background-primary);
+.day.has-note>.dot-container>svg {
+    fill: var(--text-accent);
 }
 
-/* Typography------------------------------------------------------- */
-body strong,
-body span.cm-strong {
-    color: var(--strong-color);
+.day.has-note.active {
+    background-color: var(--background-modifier-border-hover);
+    color: var(--text-normal);
 }
 
-body.bold-underline strong,
-body.bold-underline span.cm-strong {
-    border-bottom: 5.5px solid var(--bold-underline-color);
+.day.has-note.active:hover {
+    color: var(--text-on-accent);
 }
 
-body em,
-body span.cm-em {
-    color: var(--em-color);
+.day.has-note.active:hover>.dot-container>svg {
+    fill: var(--text-on-accent);
 }
 
-body.em-underline em,
-body.em-underline span.cm-em {
-    border-bottom: 5.5px solid var(--italic-underline-color);
+.day.has-note.active.today>.dot-container>svg {
+    fill: var(--text-on-accent);
 }
 
-.markdown-preview-view ul>li.task-list-item.is-checked,
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
-    text-decoration: none;
-    color: var(--text-faint);
+.day.today {
+    font-weight: 600;
 }
 
-.cm-highlight,
-mark {
-    border-radius: 5px;
-    padding: .1em .4em;
-}
+/* PDF EXPORT */
+@media print {
 
-/* Headings ------------------------------------------------------- */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--h2-color);
-    width: 100%;
-    padding-bottom: 3px;
-}
+    .markdown-rendered h1,
+    .markdown-rendered h3,
+    p,
+    li,
+    .markdown-rendered strong,
+    .markdown-rendered em,
+    .markdown-rendered th,
+    .markdown-rendered td {
+        color: #353132;
+    }
 
-body.h3-italics h3,
-body.h3-italics .HyperMD-header.HyperMD-header-3 {
-    font-style: italic;
-}
+    .markdown-rendered h4 {
+        color: #878586;
+    }
 
-/* Tooltips ------------------------------------------------------- */
-.colorful-tooltips .tooltip {
-    background-color: var(--color-accent);
-}
+    .markdown-rendered h5,
+    .markdown-rendered h6 {
+        color: #878586;
+    }
 
-.tooltip .tooltip-arrow {
-    border-bottom: 6px solid transparent;
-}
-
-.tooltip.mod-right .tooltip-arrow {
-    border-right: 6px solid transparent;
-}
-
-.tooltip.mod-left .tooltip-arrow {
-    border-left: 6px solid transparent;
-}
-
-.tooltip.mod-top .tooltip-arrow {
-    border-top: 6px solid transparent;
-}
-
-.predefined-accent-color.colorful-tooltips.accent-turquoise .tooltip,
-.predefined-accent-color.colorful-tooltips.accent-mustard .tooltip,
-.predefined-accent-color.colorful-tooltips.accent-bubblegum .tooltip,
-.predefined-accent-color.colorful-tooltips.accent-pumpkin .tooltip {
-    color: black;
+    .markdown-rendered pre {
+        background-color: var(--color-base-20);
+    }
 }
 
 /* @settings
@@ -759,20 +835,6 @@ settings:
         description.fr: Montrer les noms complets des fichiers dans l'explorateur (pas d'ellipses)
         type: class-toggle
         default: false
-    - 
-        id: colorful-tooltips
-        title: Colorful tooltips
-        title.fr: Infobulles colorées
-        description: When enabled, tooltips will have the same background color as your accent color
-        description.fr: Activer pour que les infobulles soient de la même couleur que la couleur d'accentuation
-        type: class-toggle
-        default: true
-    - 
-        id: active-line-highlight
-        title: Active line highlight
-        title.fr: Surligner la ligne active
-        type: class-toggle
-        default: false
     -
         id: border_style
         title: Border style
@@ -787,6 +849,14 @@ settings:
             - 
                 label: Visible
                 value: border-visible
+    -    
+        id: colorful-tooltips
+        title: Colorful tooltips
+        title.fr: Infobulles colorées
+        description: When enabled, tooltips will have the same background color as your accent color
+        description.fr: Activer pour que les infobulles soient de la même couleur que la couleur d'accentuation
+        type: class-toggle
+        default: true
     -
         id: color-scheme
         title: Additional color themes
@@ -810,14 +880,17 @@ settings:
             -
                 label: Undercover
                 value: ct-undercover
-	-
+            -
+                label: Obsidian
+                value: ct-obsidian
+    -
         id: accent-colors
         title: Accent Colors
         title.fr: Couleurs d'accentuation
         type: heading
         level: 2
         collapsed: true
-    - 
+    -  
         id: predefined-accent-color
         title: Enable predefined accent colors
         title.fr: Activer les couleurs d'accentuations prédéfinies
@@ -825,7 +898,7 @@ settings:
         description.fr: Activer pour pouvoir choisir sa couleur d'accentuation depuis la liste ci-dessous (quand désactivé, vous pourrez choisir votre couleur dans la section Apparence, comme d'habitude)
         type: class-toggle
         default: true
-    - 
+    -
         id: predefined-accent-colors
         title: Accent colors
         title.fr: Couleurs prédéfinies
@@ -836,8 +909,11 @@ settings:
         default: accent-ultramarine
         options:
             - 
-                label: Brick
-                value: accent-brick
+                label: Rust
+                value: accent-rust
+            - 
+                label: Vermilion
+                value: accent-vermilion
             - 
                 label: Pumpkin
                 value: accent-pumpkin
@@ -872,6 +948,25 @@ settings:
                 label: Slate
                 value: accent-slate
     -
+        id: editor
+        title: Editor
+        title.fr: Editeur
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: active-line-highlight
+        title: Active line highlight
+        title.fr: Surligner la ligne active
+        type: class-toggle
+        default: false   
+    -
+        id: hide-note-title
+        title: Hide note title
+        title.fr: Cacher le titre du document dans l'éditeur
+        type: class-toggle
+        default: false
+    -
         id: heading
         title: Headings
         title.fr: Titres
@@ -893,12 +988,28 @@ settings:
         description.fr: Activer ou désactiver le soulignement
         type: class-toggle
         default: false
-    -
+    - 
         title: H3 italics
         title.fr: Italique des H3
         id: h3-italics
         description: Toggle H3 italics
         description.fr: Activer ou désactiver l'italique
+        type: class-toggle
+        default: true
+    -         
+        title: H5 uppercase
+        title.fr: Majuscules des H5
+        id: h5-uppercase
+        description: Toggle H5 uppercase
+        description.fr: Activer ou désactiver les majuscules
+        type: class-toggle
+        default: true
+    -         
+        title: H6 uppercase
+        title.fr: Majuscules des H6
+        id: h6-uppercase
+        description: Toggle H6 uppercase
+        description.fr: Activer ou désactiver les majuscules
         type: class-toggle
         default: true
     -
@@ -962,42 +1073,42 @@ settings:
         title.fr: Taille H1
         id: h1-size
         type: variable-number
-        default: 1.8
+        default: 1.3
         format: em
     -
         title: H2 size
         title.fr: Taille H2
         id: h2-size
         type: variable-number
-        default: 1.6
+        default: 1.2
         format: em
     -
         title: H3 size
         title.fr: Taille H3
         id: h3-size
         type: variable-number
-        default: 1.4
+        default: 1.1
         format: em
     -
         title: H4 size
         title.fr: Taille H4
         id: h4-size
         type: variable-number
-        default: 1.2
+        default: 1
         format: em
     -
         title: H5 size
         title.fr: Taille H5
         id: h5-size
         type: variable-number
-        default: 1
+        default: .85
         format: em
     -
         title: H6 size
         title.fr: Taille H6
         id: h6-size
         type: variable-number
-        default: 1
+        default: .75
         format: em
     -
         id: typography
@@ -1006,6 +1117,36 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: italic-text-typography
+        title: Italic text
+        title.fr: Texte en italique
+        type: heading
+        level: 3
+    -
+        id: em-color
+        title: Italics color
+        title.fr: Couleur des italiques
+        type: variable-color
+        format: hex
+        default: '#' 
+    -
+        id: em-underline
+        title: Italics underline
+        title.fr: Soulignement des italiques
+        description: Toggle italics underline
+        description.fr: Activer ou désactiver le soulignement des textes en italiques
+        type: class-toggle
+        default: false
+    -
+        id: italic-underline-color
+        title: Italics underline color
+        title.fr: Couleur du soulignement
+        description: Change italics underline color
+        description.fr: Changer la couleur du soulignement
+        type: variable-color
+        format: hex
+        default: 'var(--yellow)' 
     -
         id: bold-text-typography
         title: Bold text
@@ -1036,35 +1177,4 @@ settings:
         type: variable-color
         format: hex
         default: 'var(--text-accent)' 
-    -
-        id: italic-text-typography
-        title: Italic text
-        title.fr: Texte en italique
-        type: heading
-        level: 3
-    -
-        id: em-color
-        title: Italics color
-        title.fr: Couleur des italiques
-        type: variable-color
-        format: hex
-        default: '#' 
-    -
-        id: em-underline
-        title: Italics underline
-        title.fr: Soulignement des italiques
-        description: Toggle italics underline
-        description.fr: Activer ou désactiver le soulignement des textes en italiques
-        type: class-toggle
-        default: true
-    -
-        id: italic-underline-color
-        title: Italics underline color
-        title.fr: Couleur du soulignement
-        description: Change italics underline color
-        description.fr: Changer la couleur du soulignement
-        type: variable-color
-        format: hex
-        default: 'var(--yellow)' 
-    -
 */
