@@ -812,7 +812,8 @@ mark {
         color: #878586;
     }
 
-    .markdown-rendered pre {
+    .markdown-rendered pre,
+    .markdown-rendered code {
         background-color: var(--color-base-20);
     }
 }
