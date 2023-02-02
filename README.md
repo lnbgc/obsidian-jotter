@@ -1,6 +1,6 @@
-## Installation
-
 ![Jotter Thumbnail](./assets/thumbnail-big.jpg)
+
+## Installation
 
 ### Obsidian
 
