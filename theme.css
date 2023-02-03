@@ -789,6 +789,31 @@ mark {
     font-weight: 600;
 }
 
+/* DATAVIEW */
+table.dataview th>span,
+.dataview.small-text {
+    font-size: var(--h6-size);
+    color: var(--text-faint);
+    font-weight: 500;
+}
+
+.markdown-preview-view th, .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th, .table-view-table>thead>tr>th {
+    padding: .3em 0;
+    border-color: var(--background-modifier-border);
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+    box-shadow: none;
+}
+
+.table-view-table > tbody > tr:hover {
+    background-color: transparent !important;
+}
+
+.markdown-preview-view img, .markdown-rendered img {
+    border-radius: 5px;
+}
+
 /* PDF EXPORT */
 @media print {
 

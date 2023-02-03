@@ -24,7 +24,7 @@
 ## Features
 
 - Style Settings support
-- Optimization and design adjustments for Canvas core plugin and [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin
+- Optimization and design adjustments for Canvas core plugin, [Kanban](https://github.com/mgmeyers/obsidian-kanban), [Calendar](https://github.com/liamcain/obsidian-calendar-plugin) and [Dataview](https://github.com/blacksmithgu/obsidian-dataview) community plugins
 
 ## Customization
 
@@ -193,3 +193,7 @@ Improvements:
 #### v. 1.3.1
 
 Patch on inline code pdf exports.
+
+#### v. 1.31.0
+
+Improvements on Dataview table styling
