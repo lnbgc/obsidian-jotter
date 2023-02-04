@@ -197,3 +197,7 @@ Patch on inline code pdf exports.
 #### v. 1.31.0
 
 Improvements on Dataview table styling
+
+#### v. 1.31.1
+
+Patch on header to show note title when creating a new note (+ header remains visible when changing title)

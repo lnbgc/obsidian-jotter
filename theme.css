@@ -552,13 +552,20 @@ body {
 }
 
 /* Header */
-.view-header-title-container.mod-at-start {
-    opacity: 0;
-    transition: .25s;
+.view-header-title-container {
+	opacity: 0;
+	transition: opacity .2s ease-in-out
 }
 
-.view-header:hover .view-header-title-container.mod-at-start {
-    opacity: 1;
+.view-header-title-container:focus-within {
+	opacity: 1;
+	transition: opacity .2s ease-in-out
+}
+
+.view-header:hover .view-header-title-container,
+.workspace-tab-header-container:hover+.workspace-tab-container .view-header-title-container {
+	opacity: 1;
+	transition: opacity .2s ease-in-out
 }
 
 .view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
