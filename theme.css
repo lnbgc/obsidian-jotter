@@ -46,6 +46,9 @@ body {
 
     --modal-border-width: 2px;
     --modal-border-color: var(--background-modifier-border);
+
+    --link-color: var(--text-accent);
+    --link-external-color: var(--text-accent);
 }
 
 .theme-dark,
@@ -1156,6 +1159,7 @@ settings:
         title.fr: Texte en italique
         type: heading
         level: 3
+        collapsed: true
     -
         id: em-color
         title: Italics color
@@ -1186,6 +1190,7 @@ settings:
         title.fr: Texte en gras
         type: heading
         level: 3
+        collapsed: true
     -
         id: strong-color
         title: Bold font color
@@ -1209,5 +1214,26 @@ settings:
         description.fr: Changer la couleur du soulignement (par défaut, la couleur sera la même que celle de la couleur d'accentuation)
         type: variable-color
         format: hex
-        default: 'var(--text-accent)' 
+        default: 'var(--text-accent)'
+    -
+        id: custom-links
+        title: Hyperlinks
+        title.fr: Hyperliens
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        title: Internal links
+        title.fr: Liens internes
+        id: link-color
+        type: variable-color
+        format: hex
+        default: 'var(--text-accent)'
+    -
+        title: External links
+        title.fr: Liens externes
+        id: link-external-color
+        type: variable-color
+        format: hex
+        default: 'var(--text-accent)'
 */
