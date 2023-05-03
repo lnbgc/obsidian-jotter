@@ -42,6 +42,7 @@ Meaning, you can customize your theme without having to get into the code part.
 - Change bold and italic text colors
 - Change bold and italic underline colors
 - Toggle bold and italic texts underlines
+- Custom internal and external links colors
 
 *Download Style Settings through the Community Plugins page in Obsidian to start customizing Jotter theme!*
 
@@ -201,3 +202,6 @@ Improvements on Dataview table styling
 #### v. 1.31.1
 
 Patch on header to show note title when creating a new note (+ header remains visible when changing title)
+
+#### v. 1.32.0
+Custom links colors have been added to the Style Settings option, following to a Github request!
